@@ -1,0 +1,46 @@
+//
+//  AllMyDemos-PrefixHeader.pch
+//  WKFAllMyDemos
+//
+//  Created by fantasy on 16/9/5.
+//  Copyright © 2016年 fantasy. All rights reserved.
+//
+
+#ifndef AllMyDemos_PrefixHeader_pch
+#define AllMyDemos_PrefixHeader_pch
+
+// Include any system framework and library headers here that should be included in all compilation units.
+// You will also need to set the Prefix Header build setting of one or more of your targets to reference this file.
+
+#define WKFColor(a,b,c,d) [UIColor colorWithRed:(a)/255. green:(b)/255. blue:(c)/255. alpha:(d)]
+#define RGBCOLOR(r,g,b) [UIColor colorWithRed:(r)/255.0 green:(g)/255.0 blue:(b)/255.0 alpha:1]
+#define RGBACOLOR(r,g,b,a) [UIColor colorWithRed:(r)/255.0 green:(g)/255.0 blue:(b)/255.0 alpha:(a)]
+#define HEXRGBCOLOR(h) RGBCOLOR(((h>>16)&0xFF), ((h>>8)&0xFF), (h&0xFF))
+#define HEXRGBACOLOR(h,a) RGBACOLOR(((h>>16)&0xFF), ((h>>8)&0xFF), (h&0xFF), a)
+
+#define ScreenWith   [UIScreen mainScreen].bounds.size.width
+#define ScreenHeight [UIScreen mainScreen].bounds.size.height
+
+//随机色
+#define RandomColor RGBcolor(arc4random_uniform(256), arc4random_uniform(256), arc4random_uniform(256))
+
+
+//解决循环引用
+#define weakify(va) \
+autoreleasepool {} \
+__weak __typeof__(va) metamacro_concat(va, _weak_) = (va);
+
+#define strongify(va) \
+try {} @finally {} \
+_Pragma("clang diagnostic push") \
+_Pragma("clang diagnostic ignored \"-Wshadow\"") \
+__strong __typeof__(va) va = metamacro_concat(va, _weak_);\
+_Pragma("clang diagnostic pop")
+#define metamacro_concat(A, B) A ## B
+
+//all import
+
+//category
+#import "UIView+WKFFrame.h"
+
+#endif /* AllMyDemos_PrefixHeader_pch */
