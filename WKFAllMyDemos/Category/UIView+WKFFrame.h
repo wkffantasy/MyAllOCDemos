@@ -2,8 +2,8 @@
 //  UIView+WKFFrame.h
 //  
 //
-//  Created by toncent on 15/4/2.
-//  Copyright (c) 2015年 toncent. All rights reserved.
+//  Created by fantasy on 15/4/2.
+//  Copyright (c) 2015年 fantasy. All rights reserved.
 //
 
 #import <UIKit/UIKit.h>

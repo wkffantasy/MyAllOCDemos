@@ -1,8 +1,8 @@
 //
-//  MarqueeController.h
+//  AlphabetController.h
 //  WKFAllMyDemos
 //
-//  Created by fantasy on 16/9/5.
+//  Created by fantasy on 16/9/6.
 //  Copyright © 2016年 fantasy. All rights reserved.
 //
 
@@ -10,6 +10,8 @@
 
 #import "SuperController.h"
 
-@interface MarqueeController : SuperController
+@interface AlphabetController : SuperController
+
+
 
 @end

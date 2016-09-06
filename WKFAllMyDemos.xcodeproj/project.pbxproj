@@ -23,6 +23,14 @@
 		9AB063D41D7D709F00AAEED5 /* NavigationTitleView.m in Sources */ = {isa = PBXBuildFile; fileRef = 9AB063D31D7D709F00AAEED5 /* NavigationTitleView.m */; };
 		9AB063DC1D7D786800AAEED5 /* UIView+WKFFrame.m in Sources */ = {isa = PBXBuildFile; fileRef = 9AB063DB1D7D786800AAEED5 /* UIView+WKFFrame.m */; };
 		9AB063E01D7D788F00AAEED5 /* ImageSizeTool.m in Sources */ = {isa = PBXBuildFile; fileRef = 9AB063DF1D7D788F00AAEED5 /* ImageSizeTool.m */; };
+		9AB0D66C1D7E5A11007E7CBD /* SuperController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9AB0D66B1D7E5A11007E7CBD /* SuperController.m */; };
+		9AB0D6751D7E5D07007E7CBD /* MyCarCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 9AB0D6701D7E5D07007E7CBD /* MyCarCell.m */; };
+		9AB0D6761D7E5D07007E7CBD /* MyCarsView.m in Sources */ = {isa = PBXBuildFile; fileRef = 9AB0D6721D7E5D07007E7CBD /* MyCarsView.m */; };
+		9AB0D6771D7E5D07007E7CBD /* MyLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = 9AB0D6741D7E5D07007E7CBD /* MyLabel.m */; };
+		9AB0D67D1D7E5D14007E7CBD /* MyCarGroupModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 9AB0D67A1D7E5D14007E7CBD /* MyCarGroupModel.m */; };
+		9AB0D67E1D7E5D14007E7CBD /* MyCarModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 9AB0D67C1D7E5D14007E7CBD /* MyCarModel.m */; };
+		9AB0D6821D7E5D48007E7CBD /* AlphabetController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9AB0D6811D7E5D48007E7CBD /* AlphabetController.m */; };
+		9AB0D6841D7E5E1F007E7CBD /* cars_total.plist in Resources */ = {isa = PBXBuildFile; fileRef = 9AB0D6831D7E5E1F007E7CBD /* cars_total.plist */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -75,6 +83,21 @@
 		9AB063DB1D7D786800AAEED5 /* UIView+WKFFrame.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+WKFFrame.m"; sourceTree = "<group>"; };
 		9AB063DE1D7D788F00AAEED5 /* ImageSizeTool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ImageSizeTool.h; sourceTree = "<group>"; };
 		9AB063DF1D7D788F00AAEED5 /* ImageSizeTool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ImageSizeTool.m; sourceTree = "<group>"; };
+		9AB0D66A1D7E5A11007E7CBD /* SuperController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SuperController.h; sourceTree = "<group>"; };
+		9AB0D66B1D7E5A11007E7CBD /* SuperController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SuperController.m; sourceTree = "<group>"; };
+		9AB0D66F1D7E5D07007E7CBD /* MyCarCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyCarCell.h; sourceTree = "<group>"; };
+		9AB0D6701D7E5D07007E7CBD /* MyCarCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyCarCell.m; sourceTree = "<group>"; };
+		9AB0D6711D7E5D07007E7CBD /* MyCarsView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyCarsView.h; sourceTree = "<group>"; };
+		9AB0D6721D7E5D07007E7CBD /* MyCarsView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyCarsView.m; sourceTree = "<group>"; };
+		9AB0D6731D7E5D07007E7CBD /* MyLabel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyLabel.h; sourceTree = "<group>"; };
+		9AB0D6741D7E5D07007E7CBD /* MyLabel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyLabel.m; sourceTree = "<group>"; };
+		9AB0D6791D7E5D14007E7CBD /* MyCarGroupModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyCarGroupModel.h; sourceTree = "<group>"; };
+		9AB0D67A1D7E5D14007E7CBD /* MyCarGroupModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyCarGroupModel.m; sourceTree = "<group>"; };
+		9AB0D67B1D7E5D14007E7CBD /* MyCarModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyCarModel.h; sourceTree = "<group>"; };
+		9AB0D67C1D7E5D14007E7CBD /* MyCarModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyCarModel.m; sourceTree = "<group>"; };
+		9AB0D6801D7E5D48007E7CBD /* AlphabetController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AlphabetController.h; sourceTree = "<group>"; };
+		9AB0D6811D7E5D48007E7CBD /* AlphabetController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AlphabetController.m; sourceTree = "<group>"; };
+		9AB0D6831D7E5E1F007E7CBD /* cars_total.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = cars_total.plist; sourceTree = "<group>"; };
 		F982FE7706B49FEBEC22B17A /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -146,6 +169,7 @@
 		9AB0638C1D7D404400AAEED5 /* WKFAllMyDemos */ = {
 			isa = PBXGroup;
 			children = (
+				9AB0D66D1D7E5C7C007E7CBD /* AlphabetRoll */,
 				9AB063DD1D7D787600AAEED5 /* Tools */,
 				9AB063D91D7D783C00AAEED5 /* Category */,
 				9AB063CE1D7D6FFA00AAEED5 /* Marquee */,
@@ -157,6 +181,7 @@
 				9AB0639C1D7D404400AAEED5 /* Assets.xcassets */,
 				9AB0639E1D7D404400AAEED5 /* LaunchScreen.storyboard */,
 				9AB063A11D7D404400AAEED5 /* Info.plist */,
+				9AB0D6831D7E5E1F007E7CBD /* cars_total.plist */,
 				9AB063991D7D404400AAEED5 /* WKFAllMyDemos.xcdatamodeld */,
 				9AB0638D1D7D404400AAEED5 /* Supporting Files */,
 			);
@@ -198,6 +223,8 @@
 				9AB063C81D7D447F00AAEED5 /* HomeModel.m */,
 				9AB063CA1D7D490900AAEED5 /* HomeCell.h */,
 				9AB063CB1D7D490900AAEED5 /* HomeCell.m */,
+				9AB0D66A1D7E5A11007E7CBD /* SuperController.h */,
+				9AB0D66B1D7E5A11007E7CBD /* SuperController.m */,
 			);
 			path = Home;
 			sourceTree = "<group>";
@@ -229,6 +256,49 @@
 				9AB063DF1D7D788F00AAEED5 /* ImageSizeTool.m */,
 			);
 			path = Tools;
+			sourceTree = "<group>";
+		};
+		9AB0D66D1D7E5C7C007E7CBD /* AlphabetRoll */ = {
+			isa = PBXGroup;
+			children = (
+				9AB0D67F1D7E5D17007E7CBD /* Controller */,
+				9AB0D6781D7E5D14007E7CBD /* Model */,
+				9AB0D66E1D7E5D07007E7CBD /* Views */,
+			);
+			path = AlphabetRoll;
+			sourceTree = "<group>";
+		};
+		9AB0D66E1D7E5D07007E7CBD /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				9AB0D66F1D7E5D07007E7CBD /* MyCarCell.h */,
+				9AB0D6701D7E5D07007E7CBD /* MyCarCell.m */,
+				9AB0D6711D7E5D07007E7CBD /* MyCarsView.h */,
+				9AB0D6721D7E5D07007E7CBD /* MyCarsView.m */,
+				9AB0D6731D7E5D07007E7CBD /* MyLabel.h */,
+				9AB0D6741D7E5D07007E7CBD /* MyLabel.m */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		9AB0D6781D7E5D14007E7CBD /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				9AB0D6791D7E5D14007E7CBD /* MyCarGroupModel.h */,
+				9AB0D67A1D7E5D14007E7CBD /* MyCarGroupModel.m */,
+				9AB0D67B1D7E5D14007E7CBD /* MyCarModel.h */,
+				9AB0D67C1D7E5D14007E7CBD /* MyCarModel.m */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		9AB0D67F1D7E5D17007E7CBD /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				9AB0D6801D7E5D48007E7CBD /* AlphabetController.h */,
+				9AB0D6811D7E5D48007E7CBD /* AlphabetController.m */,
+			);
+			path = Controller;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -339,6 +409,7 @@
 			files = (
 				9AB063A01D7D404400AAEED5 /* LaunchScreen.storyboard in Resources */,
 				9AB0639D1D7D404400AAEED5 /* Assets.xcassets in Resources */,
+				9AB0D6841D7E5E1F007E7CBD /* cars_total.plist in Resources */,
 				9AB063981D7D404400AAEED5 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -414,13 +485,20 @@
 			files = (
 				9AB063D11D7D706800AAEED5 /* MarqueeController.m in Sources */,
 				9AB063CC1D7D490900AAEED5 /* HomeCell.m in Sources */,
+				9AB0D6771D7E5D07007E7CBD /* MyLabel.m in Sources */,
+				9AB0D67D1D7E5D14007E7CBD /* MyCarGroupModel.m in Sources */,
+				9AB0D67E1D7E5D14007E7CBD /* MyCarModel.m in Sources */,
+				9AB0D6751D7E5D07007E7CBD /* MyCarCell.m in Sources */,
 				9AB063E01D7D788F00AAEED5 /* ImageSizeTool.m in Sources */,
 				9AB063C91D7D447F00AAEED5 /* HomeModel.m in Sources */,
 				9AB0639B1D7D404400AAEED5 /* WKFAllMyDemos.xcdatamodeld in Sources */,
+				9AB0D6821D7E5D48007E7CBD /* AlphabetController.m in Sources */,
 				9AB063921D7D404400AAEED5 /* AppDelegate.m in Sources */,
 				9AB063D41D7D709F00AAEED5 /* NavigationTitleView.m in Sources */,
 				9AB063DC1D7D786800AAEED5 /* UIView+WKFFrame.m in Sources */,
 				9AB063C61D7D445C00AAEED5 /* ViewController.m in Sources */,
+				9AB0D66C1D7E5A11007E7CBD /* SuperController.m in Sources */,
+				9AB0D6761D7E5D07007E7CBD /* MyCarsView.m in Sources */,
 				9AB0638F1D7D404400AAEED5 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
