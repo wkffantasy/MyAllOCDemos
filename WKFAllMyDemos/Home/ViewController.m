@@ -10,6 +10,7 @@
 #import "ViewController.h"
 
 #import "MarqueeController.h"
+#import "AlphabetController.h"
 
 
 //view
@@ -44,6 +45,13 @@
                             @"titleDescription":@"当文字超过一定的长度的时候，该文字会一直轮播下去，也就是跑马灯的效果",
                             @"status":@"已经完成",
                             @"jumeTo":NSStringFromSelector(@selector(jumpToMarqueeController)),
+                            },
+                          
+                          @{
+                            @"title":@"字母表的滑动",
+                            @"titleDescription":@"一个有section 和 cell的tableView，右侧有一个 字母表。上下滑动字母表，一个简单的动画，模仿的智联招聘",
+                            @"status":@"已经完成",
+                            @"jumeTo":NSStringFromSelector(@selector(jumpToAlphabetController)),
                             },
                           
                           ];
@@ -94,6 +102,11 @@
   
   [self performSelector:NSSelectorFromString(model.jumpTo)];
 
+}
+//跳转的所有的controller
+- (void)jumpToAlphabetController{
+  
+  [self.navigationController pushViewController:[AlphabetController new] animated:YES];
 }
 - (void)jumpToMarqueeController{
 

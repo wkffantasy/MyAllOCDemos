@@ -3,7 +3,7 @@
 //  
 //
 //  Created by fantasy on 15/4/2.
-//  Copyright (c) 2015年 toncent. All rights reserved.
+//  Copyright (c) 2015年 fantasy. All rights reserved.
 //
 
 #import "UIView+WKFFrame.h"
