@@ -17,6 +17,7 @@
 - (void)viewDidLoad {
   [super viewDidLoad];
   
+  self.automaticallyAdjustsScrollViewInsets = NO;
   [self setupNaviViews];
   
 }
@@ -27,14 +28,14 @@
   
   negativeSpacer.width = -16; // it was -6 in iOS 6
   
-  UIBarButtonItem *left = [[UIBarButtonItem alloc] initWithImage:[UIImage imageNamed:@"wordHome_backIcon"] style:UIBarButtonItemStylePlain target:self action:@selector(backTap:)];
+  UIBarButtonItem *left = [[UIBarButtonItem alloc] initWithImage:[UIImage imageNamed:@"backIcon"] style:UIBarButtonItemStylePlain target:self action:@selector(backTap:)];
   
   left.tintColor = HEXRGBCOLOR(0x454545);
   self.navigationItem.leftBarButtonItems = @[negativeSpacer, left];
   
   
   //下面的right只是让titleView居中，
-  UIBarButtonItem *right = [[UIBarButtonItem alloc] initWithImage:[UIImage imageNamed:@"wordHome_shareIcon"] style:UIBarButtonItemStylePlain target:self action:@selector(clickRight)];
+  UIBarButtonItem *right = [[UIBarButtonItem alloc] initWithImage:[UIImage imageNamed:@"shareIcon"] style:UIBarButtonItemStylePlain target:self action:@selector(clickRight)];
   
   right.tintColor = [UIColor clearColor];
   self.navigationItem.rightBarButtonItems = @[negativeSpacer, right];

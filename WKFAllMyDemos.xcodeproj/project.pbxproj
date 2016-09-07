@@ -31,6 +31,8 @@
 		9AB0D67E1D7E5D14007E7CBD /* MyCarModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 9AB0D67C1D7E5D14007E7CBD /* MyCarModel.m */; };
 		9AB0D6821D7E5D48007E7CBD /* AlphabetController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9AB0D6811D7E5D48007E7CBD /* AlphabetController.m */; };
 		9AB0D6841D7E5E1F007E7CBD /* cars_total.plist in Resources */ = {isa = PBXBuildFile; fileRef = 9AB0D6831D7E5E1F007E7CBD /* cars_total.plist */; };
+		9AB7AEBF1D7FA8F2002E22BF /* WKFCircularSlidingView.m in Sources */ = {isa = PBXBuildFile; fileRef = 9AB7AEBE1D7FA8F2002E22BF /* WKFCircularSlidingView.m */; };
+		9AB7AEC21D7FA935002E22BF /* NoMarginScrollController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9AB7AEC11D7FA935002E22BF /* NoMarginScrollController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -98,6 +100,10 @@
 		9AB0D6801D7E5D48007E7CBD /* AlphabetController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AlphabetController.h; sourceTree = "<group>"; };
 		9AB0D6811D7E5D48007E7CBD /* AlphabetController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AlphabetController.m; sourceTree = "<group>"; };
 		9AB0D6831D7E5E1F007E7CBD /* cars_total.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = cars_total.plist; sourceTree = "<group>"; };
+		9AB7AEBD1D7FA8F2002E22BF /* WKFCircularSlidingView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WKFCircularSlidingView.h; sourceTree = "<group>"; };
+		9AB7AEBE1D7FA8F2002E22BF /* WKFCircularSlidingView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WKFCircularSlidingView.m; sourceTree = "<group>"; };
+		9AB7AEC01D7FA935002E22BF /* NoMarginScrollController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NoMarginScrollController.h; sourceTree = "<group>"; };
+		9AB7AEC11D7FA935002E22BF /* NoMarginScrollController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NoMarginScrollController.m; sourceTree = "<group>"; };
 		F982FE7706B49FEBEC22B17A /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -169,6 +175,7 @@
 		9AB0638C1D7D404400AAEED5 /* WKFAllMyDemos */ = {
 			isa = PBXGroup;
 			children = (
+				9AB7AEBC1D7FA8CA002E22BF /* NoMarginScroll */,
 				9AB0D66D1D7E5C7C007E7CBD /* AlphabetRoll */,
 				9AB063DD1D7D787600AAEED5 /* Tools */,
 				9AB063D91D7D783C00AAEED5 /* Category */,
@@ -299,6 +306,17 @@
 				9AB0D6811D7E5D48007E7CBD /* AlphabetController.m */,
 			);
 			path = Controller;
+			sourceTree = "<group>";
+		};
+		9AB7AEBC1D7FA8CA002E22BF /* NoMarginScroll */ = {
+			isa = PBXGroup;
+			children = (
+				9AB7AEBD1D7FA8F2002E22BF /* WKFCircularSlidingView.h */,
+				9AB7AEBE1D7FA8F2002E22BF /* WKFCircularSlidingView.m */,
+				9AB7AEC01D7FA935002E22BF /* NoMarginScrollController.h */,
+				9AB7AEC11D7FA935002E22BF /* NoMarginScrollController.m */,
+			);
+			path = NoMarginScroll;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -492,9 +510,11 @@
 				9AB063E01D7D788F00AAEED5 /* ImageSizeTool.m in Sources */,
 				9AB063C91D7D447F00AAEED5 /* HomeModel.m in Sources */,
 				9AB0639B1D7D404400AAEED5 /* WKFAllMyDemos.xcdatamodeld in Sources */,
+				9AB7AEBF1D7FA8F2002E22BF /* WKFCircularSlidingView.m in Sources */,
 				9AB0D6821D7E5D48007E7CBD /* AlphabetController.m in Sources */,
 				9AB063921D7D404400AAEED5 /* AppDelegate.m in Sources */,
 				9AB063D41D7D709F00AAEED5 /* NavigationTitleView.m in Sources */,
+				9AB7AEC21D7FA935002E22BF /* NoMarginScrollController.m in Sources */,
 				9AB063DC1D7D786800AAEED5 /* UIView+WKFFrame.m in Sources */,
 				9AB063C61D7D445C00AAEED5 /* ViewController.m in Sources */,
 				9AB0D66C1D7E5A11007E7CBD /* SuperController.m in Sources */,
