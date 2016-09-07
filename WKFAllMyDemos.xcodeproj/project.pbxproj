@@ -8,6 +8,10 @@
 
 /* Begin PBXBuildFile section */
 		0C345FC42DD11146081A1C2F /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F982FE7706B49FEBEC22B17A /* libPods.a */; };
+		4B0286461D805466003E9195 /* PlayerProgressView.m in Sources */ = {isa = PBXBuildFile; fileRef = 4B0286431D805466003E9195 /* PlayerProgressView.m */; };
+		4B0286471D805466003E9195 /* VideoPlayController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4B0286451D805466003E9195 /* VideoPlayController.m */; };
+		4B02864A1D805489003E9195 /* VideoDemoController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4B0286491D805489003E9195 /* VideoDemoController.m */; };
+		4B02864D1D8056BE003E9195 /* TimeTool.m in Sources */ = {isa = PBXBuildFile; fileRef = 4B02864C1D8056BE003E9195 /* TimeTool.m */; };
 		9AB0638F1D7D404400AAEED5 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 9AB0638E1D7D404400AAEED5 /* main.m */; };
 		9AB063921D7D404400AAEED5 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 9AB063911D7D404400AAEED5 /* AppDelegate.m */; };
 		9AB063981D7D404400AAEED5 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9AB063961D7D404400AAEED5 /* Main.storyboard */; };
@@ -53,6 +57,14 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		4B0286421D805466003E9195 /* PlayerProgressView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PlayerProgressView.h; sourceTree = "<group>"; };
+		4B0286431D805466003E9195 /* PlayerProgressView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PlayerProgressView.m; sourceTree = "<group>"; };
+		4B0286441D805466003E9195 /* VideoPlayController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VideoPlayController.h; sourceTree = "<group>"; };
+		4B0286451D805466003E9195 /* VideoPlayController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VideoPlayController.m; sourceTree = "<group>"; };
+		4B0286481D805489003E9195 /* VideoDemoController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VideoDemoController.h; sourceTree = "<group>"; };
+		4B0286491D805489003E9195 /* VideoDemoController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VideoDemoController.m; sourceTree = "<group>"; };
+		4B02864B1D8056BE003E9195 /* TimeTool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TimeTool.h; sourceTree = "<group>"; };
+		4B02864C1D8056BE003E9195 /* TimeTool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TimeTool.m; sourceTree = "<group>"; };
 		6FE3717741DD1FD8256D894B /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 		7570CE0B42E63E3E6DC8A580 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 		9AB0638A1D7D404400AAEED5 /* WKFAllMyDemos.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WKFAllMyDemos.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -142,6 +154,27 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
+		4B0286401D80533A003E9195 /* VideoPlayerDemo */ = {
+			isa = PBXGroup;
+			children = (
+				4B0286411D80543B003E9195 /* VideoRelated */,
+				4B0286481D805489003E9195 /* VideoDemoController.h */,
+				4B0286491D805489003E9195 /* VideoDemoController.m */,
+			);
+			path = VideoPlayerDemo;
+			sourceTree = "<group>";
+		};
+		4B0286411D80543B003E9195 /* VideoRelated */ = {
+			isa = PBXGroup;
+			children = (
+				4B0286421D805466003E9195 /* PlayerProgressView.h */,
+				4B0286431D805466003E9195 /* PlayerProgressView.m */,
+				4B0286441D805466003E9195 /* VideoPlayController.h */,
+				4B0286451D805466003E9195 /* VideoPlayController.m */,
+			);
+			path = VideoRelated;
+			sourceTree = "<group>";
+		};
 		7BF68F73EDC057BC234A7B80 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -175,6 +208,7 @@
 		9AB0638C1D7D404400AAEED5 /* WKFAllMyDemos */ = {
 			isa = PBXGroup;
 			children = (
+				4B0286401D80533A003E9195 /* VideoPlayerDemo */,
 				9AB7AEBC1D7FA8CA002E22BF /* NoMarginScroll */,
 				9AB0D66D1D7E5C7C007E7CBD /* AlphabetRoll */,
 				9AB063DD1D7D787600AAEED5 /* Tools */,
@@ -259,6 +293,8 @@
 		9AB063DD1D7D787600AAEED5 /* Tools */ = {
 			isa = PBXGroup;
 			children = (
+				4B02864B1D8056BE003E9195 /* TimeTool.h */,
+				4B02864C1D8056BE003E9195 /* TimeTool.m */,
 				9AB063DE1D7D788F00AAEED5 /* ImageSizeTool.h */,
 				9AB063DF1D7D788F00AAEED5 /* ImageSizeTool.m */,
 			);
@@ -502,10 +538,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				9AB063D11D7D706800AAEED5 /* MarqueeController.m in Sources */,
+				4B02864D1D8056BE003E9195 /* TimeTool.m in Sources */,
 				9AB063CC1D7D490900AAEED5 /* HomeCell.m in Sources */,
 				9AB0D6771D7E5D07007E7CBD /* MyLabel.m in Sources */,
 				9AB0D67D1D7E5D14007E7CBD /* MyCarGroupModel.m in Sources */,
 				9AB0D67E1D7E5D14007E7CBD /* MyCarModel.m in Sources */,
+				4B0286471D805466003E9195 /* VideoPlayController.m in Sources */,
 				9AB0D6751D7E5D07007E7CBD /* MyCarCell.m in Sources */,
 				9AB063E01D7D788F00AAEED5 /* ImageSizeTool.m in Sources */,
 				9AB063C91D7D447F00AAEED5 /* HomeModel.m in Sources */,
@@ -517,6 +555,8 @@
 				9AB7AEC21D7FA935002E22BF /* NoMarginScrollController.m in Sources */,
 				9AB063DC1D7D786800AAEED5 /* UIView+WKFFrame.m in Sources */,
 				9AB063C61D7D445C00AAEED5 /* ViewController.m in Sources */,
+				4B0286461D805466003E9195 /* PlayerProgressView.m in Sources */,
+				4B02864A1D805489003E9195 /* VideoDemoController.m in Sources */,
 				9AB0D66C1D7E5A11007E7CBD /* SuperController.m in Sources */,
 				9AB0D6761D7E5D07007E7CBD /* MyCarsView.m in Sources */,
 				9AB0638F1D7D404400AAEED5 /* main.m in Sources */,

@@ -12,6 +12,7 @@
 #import "MarqueeController.h"
 #import "AlphabetController.h"
 #import "NoMarginScrollController.h"
+#import "VideoDemoController.h"
 
 
 //view
@@ -60,6 +61,12 @@
                             @"status":@"已经完成",
                             @"jumeTo":NSStringFromSelector(@selector(jumpToNoMarginScrollController)),
                             },
+                          @{
+                              @"title":@"自己写的视频播放器",
+                              @"titleDescription":@"目前打算写一个自己的视频播放器，在快进快退这卡住了，抽空整整，横屏也还有问题",
+                              @"status":@"未完成",
+                              @"jumeTo":NSStringFromSelector(@selector(jumpToVideoPlayerDemoController)),
+                              },
                           
                           ];
   
@@ -125,7 +132,11 @@
   [self.navigationController pushViewController:[[NoMarginScrollController alloc]init] animated:YES];
   
 }
-
+- (void)jumpToVideoPlayerDemoController{
+    
+  [self.navigationController pushViewController:[[VideoDemoController alloc]init] animated:YES];
+    
+}
 
 
 - (NSMutableArray *)dataArray{
