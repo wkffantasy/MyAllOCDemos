@@ -118,8 +118,8 @@
   } else {
     
     _lableSecond.hidden = NO;
-    _lableFirst.frame = CGRectMake(0, 0, rect.size.width, self.frame.size.height);
-    _lableSecond.frame = CGRectMake(rect.size.width + labelMargin,0 , rect.size.width, self.frame.size.height);
+    _lableFirst.frame = CGRectMake(0, 0, rect.size.width, self.height);
+    _lableSecond.frame = CGRectMake(rect.size.width + labelMargin,0 , rect.size.width, self.height);
     [self startToAnimate];
   }
 
@@ -131,9 +131,9 @@
   CGFloat speed = 20.0;
   CABasicAnimation * animate = [CABasicAnimation animation];
   animate.fromValue = @(0);
-  animate.toValue=@( - self.lableFirst.frame.size.width - labelMargin);
+  animate.toValue=@( - self.lableFirst.width - labelMargin);
   animate.keyPath = @"transform.translation.x";
-  animate.duration = (_lableFirst.frame.size.width + labelMargin) / speed;
+  animate.duration = (_lableFirst.width + labelMargin) / speed;
   animate.removedOnCompletion = YES;
   animate.repeatCount = MAXFLOAT;
   [_containerView.layer addAnimation:animate forKey:@"containerView animation"];
