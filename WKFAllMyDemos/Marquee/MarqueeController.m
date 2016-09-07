@@ -19,8 +19,6 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
   
-  self.view.backgroundColor = [UIColor whiteColor];
-  
   CGRect frame1 = CGRectMake(30, 100, ScreenWith - 100, 40);
   
   NavigationTitleView * titleView1 = [[NavigationTitleView alloc]initWithFrame:frame1 Text:@"缓缓飘落的枫叶像思念，我点燃烛火温暖岁末的秋天" andTitleFont:nil andTitleColor:[UIColor redColor]];

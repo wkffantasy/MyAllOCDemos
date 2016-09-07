@@ -26,8 +26,6 @@
   
   [super viewDidLoad];
   
-  self.view.backgroundColor = [UIColor whiteColor];
-  
   CGFloat scrollWidth = ScreenWith;
   CGFloat scrollHeight = scrollWidth * 40 / 64;
   

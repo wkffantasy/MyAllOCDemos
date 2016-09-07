@@ -12,6 +12,9 @@
 		4B0286471D805466003E9195 /* VideoPlayController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4B0286451D805466003E9195 /* VideoPlayController.m */; };
 		4B02864A1D805489003E9195 /* VideoDemoController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4B0286491D805489003E9195 /* VideoDemoController.m */; };
 		4B02864D1D8056BE003E9195 /* TimeTool.m in Sources */ = {isa = PBXBuildFile; fileRef = 4B02864C1D8056BE003E9195 /* TimeTool.m */; };
+		4B0286541D805A7B003E9195 /* RollingCircleView.m in Sources */ = {isa = PBXBuildFile; fileRef = 4B0286511D805A7B003E9195 /* RollingCircleView.m */; };
+		4B0286551D805A7B003E9195 /* RollingItemView.m in Sources */ = {isa = PBXBuildFile; fileRef = 4B0286531D805A7B003E9195 /* RollingItemView.m */; };
+		4B0286581D805A93003E9195 /* HaveMarginScrollController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4B0286571D805A93003E9195 /* HaveMarginScrollController.m */; };
 		9AB0638F1D7D404400AAEED5 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 9AB0638E1D7D404400AAEED5 /* main.m */; };
 		9AB063921D7D404400AAEED5 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 9AB063911D7D404400AAEED5 /* AppDelegate.m */; };
 		9AB063981D7D404400AAEED5 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9AB063961D7D404400AAEED5 /* Main.storyboard */; };
@@ -65,6 +68,12 @@
 		4B0286491D805489003E9195 /* VideoDemoController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VideoDemoController.m; sourceTree = "<group>"; };
 		4B02864B1D8056BE003E9195 /* TimeTool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TimeTool.h; sourceTree = "<group>"; };
 		4B02864C1D8056BE003E9195 /* TimeTool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TimeTool.m; sourceTree = "<group>"; };
+		4B0286501D805A7B003E9195 /* RollingCircleView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RollingCircleView.h; sourceTree = "<group>"; };
+		4B0286511D805A7B003E9195 /* RollingCircleView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RollingCircleView.m; sourceTree = "<group>"; };
+		4B0286521D805A7B003E9195 /* RollingItemView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RollingItemView.h; sourceTree = "<group>"; };
+		4B0286531D805A7B003E9195 /* RollingItemView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RollingItemView.m; sourceTree = "<group>"; };
+		4B0286561D805A93003E9195 /* HaveMarginScrollController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HaveMarginScrollController.h; sourceTree = "<group>"; };
+		4B0286571D805A93003E9195 /* HaveMarginScrollController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HaveMarginScrollController.m; sourceTree = "<group>"; };
 		6FE3717741DD1FD8256D894B /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 		7570CE0B42E63E3E6DC8A580 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 		9AB0638A1D7D404400AAEED5 /* WKFAllMyDemos.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WKFAllMyDemos.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -175,6 +184,27 @@
 			path = VideoRelated;
 			sourceTree = "<group>";
 		};
+		4B02864E1D805A1D003E9195 /* HaveMarginScroll */ = {
+			isa = PBXGroup;
+			children = (
+				4B02864F1D805A50003E9195 /* View */,
+				4B0286561D805A93003E9195 /* HaveMarginScrollController.h */,
+				4B0286571D805A93003E9195 /* HaveMarginScrollController.m */,
+			);
+			path = HaveMarginScroll;
+			sourceTree = "<group>";
+		};
+		4B02864F1D805A50003E9195 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				4B0286501D805A7B003E9195 /* RollingCircleView.h */,
+				4B0286511D805A7B003E9195 /* RollingCircleView.m */,
+				4B0286521D805A7B003E9195 /* RollingItemView.h */,
+				4B0286531D805A7B003E9195 /* RollingItemView.m */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
 		7BF68F73EDC057BC234A7B80 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -208,6 +238,7 @@
 		9AB0638C1D7D404400AAEED5 /* WKFAllMyDemos */ = {
 			isa = PBXGroup;
 			children = (
+				4B02864E1D805A1D003E9195 /* HaveMarginScroll */,
 				4B0286401D80533A003E9195 /* VideoPlayerDemo */,
 				9AB7AEBC1D7FA8CA002E22BF /* NoMarginScroll */,
 				9AB0D66D1D7E5C7C007E7CBD /* AlphabetRoll */,
@@ -539,9 +570,11 @@
 			files = (
 				9AB063D11D7D706800AAEED5 /* MarqueeController.m in Sources */,
 				4B02864D1D8056BE003E9195 /* TimeTool.m in Sources */,
+				4B0286541D805A7B003E9195 /* RollingCircleView.m in Sources */,
 				9AB063CC1D7D490900AAEED5 /* HomeCell.m in Sources */,
 				9AB0D6771D7E5D07007E7CBD /* MyLabel.m in Sources */,
 				9AB0D67D1D7E5D14007E7CBD /* MyCarGroupModel.m in Sources */,
+				4B0286581D805A93003E9195 /* HaveMarginScrollController.m in Sources */,
 				9AB0D67E1D7E5D14007E7CBD /* MyCarModel.m in Sources */,
 				4B0286471D805466003E9195 /* VideoPlayController.m in Sources */,
 				9AB0D6751D7E5D07007E7CBD /* MyCarCell.m in Sources */,
@@ -549,6 +582,7 @@
 				9AB063C91D7D447F00AAEED5 /* HomeModel.m in Sources */,
 				9AB0639B1D7D404400AAEED5 /* WKFAllMyDemos.xcdatamodeld in Sources */,
 				9AB7AEBF1D7FA8F2002E22BF /* WKFCircularSlidingView.m in Sources */,
+				4B0286551D805A7B003E9195 /* RollingItemView.m in Sources */,
 				9AB0D6821D7E5D48007E7CBD /* AlphabetController.m in Sources */,
 				9AB063921D7D404400AAEED5 /* AppDelegate.m in Sources */,
 				9AB063D41D7D709F00AAEED5 /* NavigationTitleView.m in Sources */,
