@@ -11,6 +11,7 @@
 
 #import "MarqueeController.h"
 #import "AlphabetController.h"
+#import "NoMarginScrollController.h"
 
 
 //view
@@ -52,6 +53,12 @@
                             @"titleDescription":@"一个有section 和 cell的tableView，右侧有一个 字母表。上下滑动字母表，一个简单的动画，模仿的智联招聘",
                             @"status":@"已经完成",
                             @"jumeTo":NSStringFromSelector(@selector(jumpToAlphabetController)),
+                            },
+                          @{
+                            @"title":@"scroll item的无缝无限循环滚动",
+                            @"titleDescription":@"一个scrollView 里面有好多图片 或者item，可以一直左滑 也可以一直右滑，使用frame做的，目前没有用到Masonry",
+                            @"status":@"已经完成",
+                            @"jumeTo":NSStringFromSelector(@selector(jumpToNoMarginScrollController)),
                             },
                           
                           ];
@@ -113,6 +120,12 @@
   [self.navigationController pushViewController:[MarqueeController new] animated:YES];
   
 }
+- (void)jumpToNoMarginScrollController{
+  
+  [self.navigationController pushViewController:[[NoMarginScrollController alloc]init] animated:YES];
+  
+}
+
 
 
 - (NSMutableArray *)dataArray{
