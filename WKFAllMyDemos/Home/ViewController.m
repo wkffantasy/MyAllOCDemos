@@ -14,7 +14,10 @@
 #import "NoMarginScrollController.h"
 #import "VideoDemoController.h"
 #import "HaveMarginScrollController.h"
+#import "WaveAnimationController.h"
+
 #import "SubclassController.h"
+
 
 
 //view
@@ -152,6 +155,12 @@
 
 
 //跳转的所有的controller
+
+- (void)jumpToWaveAnimationController {
+  
+  [self.navigationController pushViewController:[WaveAnimationController new] animated:YES];
+  
+}
 - (void)jumpToAlphabetController{
   
   [self.navigationController pushViewController:[AlphabetController new] animated:YES];
@@ -238,6 +247,13 @@
                             @"titleDescription":@"目前打算写一个自己的视频播放器，在快进快退这卡住了，抽空整整，横屏也还有问题",
                             @"status":@"未完成",
                             @"jumeTo":NSStringFromSelector(@selector(jumpToVideoPlayerDemoController)),
+                            },
+                          
+                          @{
+                            @"title":@"模仿拉勾app 我 界面的wave形式",
+                            @"titleDescription":@"一个wave浪 一波接一波",
+                            @"status":@"在写",
+                            @"jumeTo":NSStringFromSelector(@selector(jumpToWaveAnimationController)),
                             },
                           
                           ];

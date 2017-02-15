@@ -17,6 +17,8 @@
 		4B0286581D805A93003E9195 /* HaveMarginScrollController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4B0286571D805A93003E9195 /* HaveMarginScrollController.m */; };
 		9A7EB4501E5437AE0084AC49 /* HeaderSelectView.m in Sources */ = {isa = PBXBuildFile; fileRef = 9A7EB44F1E5437AE0084AC49 /* HeaderSelectView.m */; };
 		9A7EB4561E543B960084AC49 /* SubclassController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9A7EB4551E543B960084AC49 /* SubclassController.m */; };
+		9A7EB45D1E5459B90084AC49 /* WaveAnimationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9A7EB45C1E5459B90084AC49 /* WaveAnimationController.m */; };
+		9A7EB4601E545E470084AC49 /* WaveView.m in Sources */ = {isa = PBXBuildFile; fileRef = 9A7EB45F1E545E470084AC49 /* WaveView.m */; };
 		9AB0638F1D7D404400AAEED5 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 9AB0638E1D7D404400AAEED5 /* main.m */; };
 		9AB063921D7D404400AAEED5 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 9AB063911D7D404400AAEED5 /* AppDelegate.m */; };
 		9AB063981D7D404400AAEED5 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9AB063961D7D404400AAEED5 /* Main.storyboard */; };
@@ -82,6 +84,10 @@
 		9A7EB44F1E5437AE0084AC49 /* HeaderSelectView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HeaderSelectView.m; sourceTree = "<group>"; };
 		9A7EB4541E543B960084AC49 /* SubclassController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SubclassController.h; sourceTree = "<group>"; };
 		9A7EB4551E543B960084AC49 /* SubclassController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SubclassController.m; sourceTree = "<group>"; };
+		9A7EB45B1E5459B90084AC49 /* WaveAnimationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WaveAnimationController.h; sourceTree = "<group>"; };
+		9A7EB45C1E5459B90084AC49 /* WaveAnimationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WaveAnimationController.m; sourceTree = "<group>"; };
+		9A7EB45E1E545E470084AC49 /* WaveView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WaveView.h; sourceTree = "<group>"; };
+		9A7EB45F1E545E470084AC49 /* WaveView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WaveView.m; sourceTree = "<group>"; };
 		9AB0638A1D7D404400AAEED5 /* WKFAllMyDemos.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WKFAllMyDemos.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9AB0638E1D7D404400AAEED5 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		9AB063901D7D404400AAEED5 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -236,6 +242,17 @@
 			path = ReusableView;
 			sourceTree = "<group>";
 		};
+		9A7EB45A1E5459790084AC49 /* WaveAnimation */ = {
+			isa = PBXGroup;
+			children = (
+				9A7EB45E1E545E470084AC49 /* WaveView.h */,
+				9A7EB45F1E545E470084AC49 /* WaveView.m */,
+				9A7EB45B1E5459B90084AC49 /* WaveAnimationController.h */,
+				9A7EB45C1E5459B90084AC49 /* WaveAnimationController.m */,
+			);
+			path = WaveAnimation;
+			sourceTree = "<group>";
+		};
 		9AB063811D7D404400AAEED5 = {
 			isa = PBXGroup;
 			children = (
@@ -262,6 +279,7 @@
 		9AB0638C1D7D404400AAEED5 /* WKFAllMyDemos */ = {
 			isa = PBXGroup;
 			children = (
+				9A7EB45A1E5459790084AC49 /* WaveAnimation */,
 				4B02864E1D805A1D003E9195 /* HaveMarginScroll */,
 				4B0286401D80533A003E9195 /* VideoPlayerDemo */,
 				9AB7AEBC1D7FA8CA002E22BF /* NoMarginScroll */,
@@ -606,11 +624,13 @@
 				4B0286471D805466003E9195 /* VideoPlayController.m in Sources */,
 				9AB0D6751D7E5D07007E7CBD /* MyCarCell.m in Sources */,
 				9AB063E01D7D788F00AAEED5 /* ImageSizeTool.m in Sources */,
+				9A7EB4601E545E470084AC49 /* WaveView.m in Sources */,
 				9A7EB4561E543B960084AC49 /* SubclassController.m in Sources */,
 				9AB063C91D7D447F00AAEED5 /* HomeModel.m in Sources */,
 				9AB0639B1D7D404400AAEED5 /* WKFAllMyDemos.xcdatamodeld in Sources */,
 				9AB7AEBF1D7FA8F2002E22BF /* WKFCircularSlidingView.m in Sources */,
 				4B0286551D805A7B003E9195 /* RollingItemView.m in Sources */,
+				9A7EB45D1E5459B90084AC49 /* WaveAnimationController.m in Sources */,
 				9AB0D6821D7E5D48007E7CBD /* AlphabetController.m in Sources */,
 				9AB063921D7D404400AAEED5 /* AppDelegate.m in Sources */,
 				9AB063D41D7D709F00AAEED5 /* NavigationTitleView.m in Sources */,
