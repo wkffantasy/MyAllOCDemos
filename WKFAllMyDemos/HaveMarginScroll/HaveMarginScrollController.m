@@ -36,7 +36,7 @@
         NSLog(@"index == %d",index);
         
     }];
-    rollView.frame = CGRectMake(0, 100, ScreenWith, itemHeight);
+    rollView.frame = CGRectMake(0, 100, ScreenWidth, itemHeight);
     [self.view addSubview:rollView];
     
     NSArray * array = @[

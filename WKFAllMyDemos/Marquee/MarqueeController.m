@@ -19,18 +19,18 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
   
-  CGRect frame1 = CGRectMake(30, 100, ScreenWith - 100, 40);
+  CGRect frame1 = CGRectMake(30, 100, ScreenWidth - 100, 40);
   
   NavigationTitleView * titleView1 = [[NavigationTitleView alloc]initWithFrame:frame1 Text:@"缓缓飘落的枫叶像思念，我点燃烛火温暖岁末的秋天" andTitleFont:nil andTitleColor:[UIColor redColor]];
   [self.view addSubview:titleView1];
   
   [self.titleView updateText:@"最美的不是下雨天，是曾与你躲过雨的屋檐" andTitleFont:nil andTitleColor:[UIColor redColor]];
   
-  CGRect frame2 = CGRectMake(30, 150, ScreenWith - 100, 40);
+  CGRect frame2 = CGRectMake(30, 150, ScreenWidth - 100, 40);
   NavigationTitleView * titleView3 = [[NavigationTitleView alloc]initWithFrame:frame2 Text:@"你说把爱渐渐放下回忆走更远" andTitleFont:[UIFont systemFontOfSize:13] andTitleColor:[UIColor greenColor]];
   [self.view addSubview:titleView3];
   
-  CGRect frame3 = CGRectMake(30, 230, ScreenWith - 100, 40);
+  CGRect frame3 = CGRectMake(30, 230, ScreenWidth - 100, 40);
   NavigationTitleView * titleView4 = [[NavigationTitleView alloc]initWithFrame:frame3 Text:@"海天连线的地方是那夕阳" andTitleFont:[UIFont systemFontOfSize:20] andTitleColor:[UIColor blackColor]];
   [self.view addSubview:titleView4];
   

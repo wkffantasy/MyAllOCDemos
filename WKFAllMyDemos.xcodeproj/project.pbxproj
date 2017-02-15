@@ -15,6 +15,8 @@
 		4B0286541D805A7B003E9195 /* RollingCircleView.m in Sources */ = {isa = PBXBuildFile; fileRef = 4B0286511D805A7B003E9195 /* RollingCircleView.m */; };
 		4B0286551D805A7B003E9195 /* RollingItemView.m in Sources */ = {isa = PBXBuildFile; fileRef = 4B0286531D805A7B003E9195 /* RollingItemView.m */; };
 		4B0286581D805A93003E9195 /* HaveMarginScrollController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4B0286571D805A93003E9195 /* HaveMarginScrollController.m */; };
+		9A7EB4501E5437AE0084AC49 /* HeaderSelectView.m in Sources */ = {isa = PBXBuildFile; fileRef = 9A7EB44F1E5437AE0084AC49 /* HeaderSelectView.m */; };
+		9A7EB4561E543B960084AC49 /* SubclassController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9A7EB4551E543B960084AC49 /* SubclassController.m */; };
 		9AB0638F1D7D404400AAEED5 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 9AB0638E1D7D404400AAEED5 /* main.m */; };
 		9AB063921D7D404400AAEED5 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 9AB063911D7D404400AAEED5 /* AppDelegate.m */; };
 		9AB063981D7D404400AAEED5 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9AB063961D7D404400AAEED5 /* Main.storyboard */; };
@@ -76,6 +78,10 @@
 		4B0286571D805A93003E9195 /* HaveMarginScrollController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HaveMarginScrollController.m; sourceTree = "<group>"; };
 		6FE3717741DD1FD8256D894B /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 		7570CE0B42E63E3E6DC8A580 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
+		9A7EB44E1E5437AE0084AC49 /* HeaderSelectView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HeaderSelectView.h; sourceTree = "<group>"; };
+		9A7EB44F1E5437AE0084AC49 /* HeaderSelectView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HeaderSelectView.m; sourceTree = "<group>"; };
+		9A7EB4541E543B960084AC49 /* SubclassController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SubclassController.h; sourceTree = "<group>"; };
+		9A7EB4551E543B960084AC49 /* SubclassController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SubclassController.m; sourceTree = "<group>"; };
 		9AB0638A1D7D404400AAEED5 /* WKFAllMyDemos.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WKFAllMyDemos.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9AB0638E1D7D404400AAEED5 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		9AB063901D7D404400AAEED5 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -213,9 +219,27 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		9A7EB44C1E5437600084AC49 /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				9A7EB44D1E5437770084AC49 /* ReusableView */,
+			);
+			path = Common;
+			sourceTree = "<group>";
+		};
+		9A7EB44D1E5437770084AC49 /* ReusableView */ = {
+			isa = PBXGroup;
+			children = (
+				9A7EB44E1E5437AE0084AC49 /* HeaderSelectView.h */,
+				9A7EB44F1E5437AE0084AC49 /* HeaderSelectView.m */,
+			);
+			path = ReusableView;
+			sourceTree = "<group>";
+		};
 		9AB063811D7D404400AAEED5 = {
 			isa = PBXGroup;
 			children = (
+				9A7EB44C1E5437600084AC49 /* Common */,
 				9AB0638C1D7D404400AAEED5 /* WKFAllMyDemos */,
 				9AB063A91D7D404500AAEED5 /* WKFAllMyDemosTests */,
 				9AB063B41D7D404500AAEED5 /* WKFAllMyDemosUITests */,
@@ -289,6 +313,8 @@
 		9AB063C31D7D442100AAEED5 /* Home */ = {
 			isa = PBXGroup;
 			children = (
+				9A7EB4541E543B960084AC49 /* SubclassController.h */,
+				9A7EB4551E543B960084AC49 /* SubclassController.m */,
 				9AB063C41D7D445C00AAEED5 /* ViewController.h */,
 				9AB063C51D7D445C00AAEED5 /* ViewController.m */,
 				9AB063C71D7D447F00AAEED5 /* HomeModel.h */,
@@ -456,6 +482,7 @@
 				TargetAttributes = {
 					9AB063891D7D404400AAEED5 = {
 						CreatedOnToolsVersion = 7.3;
+						DevelopmentTeam = ZZ9329T9X9;
 					};
 					9AB063A51D7D404500AAEED5 = {
 						CreatedOnToolsVersion = 7.3;
@@ -579,6 +606,7 @@
 				4B0286471D805466003E9195 /* VideoPlayController.m in Sources */,
 				9AB0D6751D7E5D07007E7CBD /* MyCarCell.m in Sources */,
 				9AB063E01D7D788F00AAEED5 /* ImageSizeTool.m in Sources */,
+				9A7EB4561E543B960084AC49 /* SubclassController.m in Sources */,
 				9AB063C91D7D447F00AAEED5 /* HomeModel.m in Sources */,
 				9AB0639B1D7D404400AAEED5 /* WKFAllMyDemos.xcdatamodeld in Sources */,
 				9AB7AEBF1D7FA8F2002E22BF /* WKFCircularSlidingView.m in Sources */,
@@ -592,6 +620,7 @@
 				4B0286461D805466003E9195 /* PlayerProgressView.m in Sources */,
 				4B02864A1D805489003E9195 /* VideoDemoController.m in Sources */,
 				9AB0D66C1D7E5A11007E7CBD /* SuperController.m in Sources */,
+				9A7EB4501E5437AE0084AC49 /* HeaderSelectView.m in Sources */,
 				9AB0D6761D7E5D07007E7CBD /* MyCarsView.m in Sources */,
 				9AB0638F1D7D404400AAEED5 /* main.m in Sources */,
 			);
@@ -737,6 +766,7 @@
 			baseConfigurationReference = 7570CE0B42E63E3E6DC8A580 /* Pods.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = ZZ9329T9X9;
 				GCC_PREFIX_HEADER = "$(SRCROOT)/WKFAllMyDemos/AllMyDemos-PrefixHeader.pch";
 				INFOPLIST_FILE = WKFAllMyDemos/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -750,6 +780,7 @@
 			baseConfigurationReference = 6FE3717741DD1FD8256D894B /* Pods.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = ZZ9329T9X9;
 				GCC_PREFIX_HEADER = "$(SRCROOT)/WKFAllMyDemos/AllMyDemos-PrefixHeader.pch";
 				INFOPLIST_FILE = WKFAllMyDemos/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";

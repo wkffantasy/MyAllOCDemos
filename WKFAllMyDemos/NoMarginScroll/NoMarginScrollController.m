@@ -26,8 +26,8 @@
   
   [super viewDidLoad];
   
-  CGFloat scrollWidth = ScreenWith;
-  CGFloat scrollHeight = scrollWidth * 40 / 64;
+  CGFloat scrollWidth = ScreenWidth;
+  CGFloat scrollHeight = ScreenWidth * 40 / 64;
   
   CGRect frame=CGRectMake(0, 64, scrollWidth, scrollHeight);
   
@@ -45,7 +45,7 @@
   //label
   UILabel *statusLabel = [[UILabel alloc]init];
   statusLabel.textAlignment = NSTextAlignmentCenter;
-  statusLabel.frame=CGRectMake(0, CGRectGetMaxY(firstView.frame) + 30, ScreenWith, 30);
+  statusLabel.frame=CGRectMake(0, CGRectGetMaxY(firstView.frame) + 30, ScreenWidth, 30);
   statusLabel.text = @"还没有上面点击图片";
   _statusLabel=statusLabel;
   [self.view addSubview:statusLabel];

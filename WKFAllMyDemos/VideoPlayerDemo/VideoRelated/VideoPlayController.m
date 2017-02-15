@@ -111,9 +111,9 @@
   _ratesArray = @[@"1.0",@"1.5",@"2.0"];
   _ratesIndex = 0;
   
-  _smallScreenFrame = CGRectMake(0, 20, ScreenWith, ScreenWith * 0.6);
+  _smallScreenFrame = CGRectMake(0, 20, ScreenWidth, ScreenWidth * 0.6);
   
-  _fullScreenFrame = CGRectMake(0, 0, ScreenHeight, ScreenWith);
+  _fullScreenFrame = CGRectMake(0, 0, ScreenHeight, ScreenWidth);
   
   switch (_screenStatus) {
     case VideoPlayerScreenFull:
@@ -633,7 +633,7 @@
     }];
     [UIView animateWithDuration:0.2 animations:^{
       
-      self.view.frame = CGRectMake(0, 0, ScreenWith ,ScreenHeight );
+      self.view.frame = CGRectMake(0, 0, ScreenWidth ,ScreenHeight );
       
     }];
     
@@ -655,7 +655,7 @@
     }];
     [UIView animateWithDuration:0.2 animations:^{
       
-      self.view.frame = CGRectMake(0, 0, ScreenWith, ScreenHeight);
+      self.view.frame = CGRectMake(0, 0, ScreenWidth, ScreenHeight);
       
     }];
     

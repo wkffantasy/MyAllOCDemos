@@ -42,7 +42,7 @@
   self.navigationItem.rightBarButtonItems = @[negativeSpacer, right];
   
   
-  NavigationTitleView * titleView = [[NavigationTitleView alloc]initWithFrame:CGRectMake(0, 0, ScreenWith - 100, 30) Text:@"" andTitleFont:[UIFont systemFontOfSize:18] andTitleColor:HEXRGBCOLOR(0x454545)];
+  NavigationTitleView * titleView = [[NavigationTitleView alloc]initWithFrame:CGRectMake(0, 0, ScreenWidth - 100, 30) Text:@"" andTitleFont:[UIFont systemFontOfSize:18] andTitleColor:HEXRGBCOLOR(0x454545)];
   
   _titleView = titleView;
   self.navigationItem.titleView = titleView;
