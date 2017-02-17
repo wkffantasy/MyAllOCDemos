@@ -106,11 +106,13 @@ typedef NS_ENUM(NSInteger, AXWaveAnimationStatus) {
 }
 
 - (void)drawRect:(CGRect)rect {
+  
   CGMutablePathRef path = CGPathCreateMutable();
   float y = offsetY;
   CGPathMoveToPoint(path, nil, 0, y);
   
   for (float x = 0.0f; x <=  self.frame.size.width; x++) {
+    
     y = amplitude * sin(cycle * x + offsetX) + offsetY;
     CGPathAddLineToPoint(path, nil, x, y);
   }
@@ -121,6 +123,10 @@ typedef NS_ENUM(NSInteger, AXWaveAnimationStatus) {
   
   self.shapeLayer.path = path;
   CGPathRelease(path);
+  
+  
+  
+  
 }
 
 - (void)displayLinkRefresh:(CADisplayLink *)displayLink {
