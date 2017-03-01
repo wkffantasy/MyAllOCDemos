@@ -44,6 +44,7 @@
   if (self = [super initWithStyle:style reuseIdentifier:reuseIdentifier]) {
     
     self.backgroundColor = [UIColor whiteColor];
+//    self.backgroundColor = RandomColor;
     self.selectionStyle = UITableViewCellSelectionStyleNone;
     [self setupViews];
     
