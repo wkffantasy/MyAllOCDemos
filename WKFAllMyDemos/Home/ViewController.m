@@ -15,6 +15,7 @@
 #import "VideoDemoController.h"
 #import "HaveMarginScrollController.h"
 #import "WaveAnimationController.h"
+#import "MoveAnimateController.h"
 
 #import "SubclassController.h"
 
@@ -185,6 +186,11 @@
     [self.navigationController pushViewController:[HaveMarginScrollController new] animated:YES];
     
 }
+- (void)jumpToMoveAnimationController{
+  
+  [self.navigationController pushViewController:[MoveAnimateController new] animated:YES];
+  
+}
 
 //dataSource
 
@@ -216,6 +222,12 @@
 - (NSArray *)allDemosArray {
   
   NSArray * dictArray = @[
+                          @{
+                            @"title":@"一个tableView的滑动带动 弧形和header的滑动",
+                            @"titleDescription":@"。。。。",
+                            @"status":@"在写",
+                            @"jumeTo":NSStringFromSelector(@selector(jumpToMoveAnimationController)),
+                            },
                           @{
                             @"title":@"Label的跑马灯效果",
                             @"titleDescription":@"当文字超过一定的长度的时候，该文字会一直轮播下去，也就是跑马灯的效果",
@@ -255,6 +267,7 @@
                             @"status":@"在写",
                             @"jumeTo":NSStringFromSelector(@selector(jumpToWaveAnimationController)),
                             },
+                          
                           
                           ];
   

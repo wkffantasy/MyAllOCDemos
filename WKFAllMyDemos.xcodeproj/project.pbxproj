@@ -44,6 +44,8 @@
 		9AB0D6841D7E5E1F007E7CBD /* cars_total.plist in Resources */ = {isa = PBXBuildFile; fileRef = 9AB0D6831D7E5E1F007E7CBD /* cars_total.plist */; };
 		9AB7AEBF1D7FA8F2002E22BF /* WKFCircularSlidingView.m in Sources */ = {isa = PBXBuildFile; fileRef = 9AB7AEBE1D7FA8F2002E22BF /* WKFCircularSlidingView.m */; };
 		9AB7AEC21D7FA935002E22BF /* NoMarginScrollController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9AB7AEC11D7FA935002E22BF /* NoMarginScrollController.m */; };
+		9AC55D7C1E66990100510131 /* MoveAnimateController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9AC55D7B1E66990100510131 /* MoveAnimateController.m */; };
+		9AC55D7F1E669BB600510131 /* CurveView.m in Sources */ = {isa = PBXBuildFile; fileRef = 9AC55D7E1E669BB600510131 /* CurveView.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -137,6 +139,10 @@
 		9AB7AEBE1D7FA8F2002E22BF /* WKFCircularSlidingView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WKFCircularSlidingView.m; sourceTree = "<group>"; };
 		9AB7AEC01D7FA935002E22BF /* NoMarginScrollController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NoMarginScrollController.h; sourceTree = "<group>"; };
 		9AB7AEC11D7FA935002E22BF /* NoMarginScrollController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NoMarginScrollController.m; sourceTree = "<group>"; };
+		9AC55D7A1E66990100510131 /* MoveAnimateController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MoveAnimateController.h; sourceTree = "<group>"; };
+		9AC55D7B1E66990100510131 /* MoveAnimateController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MoveAnimateController.m; sourceTree = "<group>"; };
+		9AC55D7D1E669BB600510131 /* CurveView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CurveView.h; sourceTree = "<group>"; };
+		9AC55D7E1E669BB600510131 /* CurveView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CurveView.m; sourceTree = "<group>"; };
 		F982FE7706B49FEBEC22B17A /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -279,6 +285,7 @@
 		9AB0638C1D7D404400AAEED5 /* WKFAllMyDemos */ = {
 			isa = PBXGroup;
 			children = (
+				9AC55D791E6698CD00510131 /* MoveAnimation */,
 				9A7EB45A1E5459790084AC49 /* WaveAnimation */,
 				4B02864E1D805A1D003E9195 /* HaveMarginScroll */,
 				4B0286401D80533A003E9195 /* VideoPlayerDemo */,
@@ -428,6 +435,17 @@
 				9AB7AEC11D7FA935002E22BF /* NoMarginScrollController.m */,
 			);
 			path = NoMarginScroll;
+			sourceTree = "<group>";
+		};
+		9AC55D791E6698CD00510131 /* MoveAnimation */ = {
+			isa = PBXGroup;
+			children = (
+				9AC55D7A1E66990100510131 /* MoveAnimateController.h */,
+				9AC55D7B1E66990100510131 /* MoveAnimateController.m */,
+				9AC55D7D1E669BB600510131 /* CurveView.h */,
+				9AC55D7E1E669BB600510131 /* CurveView.m */,
+			);
+			path = MoveAnimation;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -619,7 +637,9 @@
 				9AB063CC1D7D490900AAEED5 /* HomeCell.m in Sources */,
 				9AB0D6771D7E5D07007E7CBD /* MyLabel.m in Sources */,
 				9AB0D67D1D7E5D14007E7CBD /* MyCarGroupModel.m in Sources */,
+				9AC55D7F1E669BB600510131 /* CurveView.m in Sources */,
 				4B0286581D805A93003E9195 /* HaveMarginScrollController.m in Sources */,
+				9AC55D7C1E66990100510131 /* MoveAnimateController.m in Sources */,
 				9AB0D67E1D7E5D14007E7CBD /* MyCarModel.m in Sources */,
 				4B0286471D805466003E9195 /* VideoPlayController.m in Sources */,
 				9AB0D6751D7E5D07007E7CBD /* MyCarCell.m in Sources */,
