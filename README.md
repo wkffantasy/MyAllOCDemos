@@ -21,6 +21,7 @@ http://www.cocoachina.com/ios/20170207/18590.html redux-oc
 
 Swift
 https://www.cnswift.org/a-swift-tour  swift学习
+https://github.com/nitinsh99/VeloxDownloader  swift下载
 
 
 JS
