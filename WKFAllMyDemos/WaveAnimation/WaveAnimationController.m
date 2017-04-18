@@ -31,13 +31,12 @@
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
-
+- (void)dealloc{
+    [_waveView removeThisDisplayLink];
+}
 - (WaveView *)animationView {
   if (!_waveView) {
-    _waveView = [[WaveView alloc] initWithFrame:CGRectMake(0, 100, ScreenWidth, 300)
-                                                backgroundColor:[UIColor lightGrayColor]
-                                                      fillColor:[UIColor redColor]
-                                                       autoPlay:YES];
+      _waveView = [[WaveView alloc] initWithFrame:CGRectMake(0, 100, ScreenWidth, 30)];
   }
   return _waveView;
 }
