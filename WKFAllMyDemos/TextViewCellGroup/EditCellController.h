@@ -1,15 +1,13 @@
 //
-//  WaveView.h
+//  EditCellController.h
 //  WKFAllMyDemos
 //
-//  Created by fantasy on 17/2/15.
+//  Created by fantasy on 17/6/15.
 //  Copyright © 2017年 fantasy. All rights reserved.
 //
 
 #import <UIKit/UIKit.h>
 
-@interface WaveView : UIView
-
--(void)removeThisDisplayLink;
+@interface EditCellController : UIViewController
 
 @end

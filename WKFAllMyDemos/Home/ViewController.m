@@ -16,7 +16,7 @@
 #import "HaveMarginScrollController.h"
 #import "WaveAnimationController.h"
 #import "MoveAnimateController.h"
-
+#import "EditCellController.h"
 #import "SubclassController.h"
 
 
@@ -186,6 +186,10 @@
     [self.navigationController pushViewController:[HaveMarginScrollController new] animated:YES];
     
 }
+- (void)jumpToEditViewController{
+    [self.navigationController pushViewController:[EditCellController new] animated:YES];
+}
+
 - (void)jumpToMoveAnimationController{
   
   [self.navigationController pushViewController:[MoveAnimateController new] animated:YES];
@@ -222,6 +226,12 @@
 - (NSArray *)allDemosArray {
   
   NSArray * dictArray = @[
+                          @{
+                              @"title":@"一个可编辑的tableView的cell",
+                              @"titleDescription":@"。。。。",
+                              @"status":@"在写",
+                              @"jumeTo":NSStringFromSelector(@selector(jumpToEditViewController)),
+                              },
                           @{
                             @"title":@"一个tableView的滑动带动 弧形和header的滑动",
                             @"titleDescription":@"。。。。",

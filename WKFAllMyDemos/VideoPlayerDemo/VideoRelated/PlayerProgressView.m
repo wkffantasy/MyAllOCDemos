@@ -8,6 +8,8 @@
 
 #import "PlayerProgressView.h"
 
+
+
 @interface PlayerProgressView ()
 
 @property (weak, nonatomic) UIView * playProgressView;
