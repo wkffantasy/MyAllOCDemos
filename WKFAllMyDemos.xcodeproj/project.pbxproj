@@ -15,10 +15,16 @@
 		4B0286541D805A7B003E9195 /* RollingCircleView.m in Sources */ = {isa = PBXBuildFile; fileRef = 4B0286511D805A7B003E9195 /* RollingCircleView.m */; };
 		4B0286551D805A7B003E9195 /* RollingItemView.m in Sources */ = {isa = PBXBuildFile; fileRef = 4B0286531D805A7B003E9195 /* RollingItemView.m */; };
 		4B0286581D805A93003E9195 /* HaveMarginScrollController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4B0286571D805A93003E9195 /* HaveMarginScrollController.m */; };
+		9A27BADC1EA70A5C00690EEB /* MCRadarChartView.m in Sources */ = {isa = PBXBuildFile; fileRef = 9A27BAD51EA70A5C00690EEB /* MCRadarChartView.m */; };
+		9A27BADD1EA70A5C00690EEB /* MCRadarLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = 9A27BAD71EA70A5C00690EEB /* MCRadarLayer.m */; };
+		9A27BADE1EA70A5C00690EEB /* RadarView.m in Sources */ = {isa = PBXBuildFile; fileRef = 9A27BAD91EA70A5C00690EEB /* RadarView.m */; };
+		9A27BADF1EA70A5C00690EEB /* RCTRadarManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 9A27BADB1EA70A5C00690EEB /* RCTRadarManager.m */; };
 		9A7EB4501E5437AE0084AC49 /* HeaderSelectView.m in Sources */ = {isa = PBXBuildFile; fileRef = 9A7EB44F1E5437AE0084AC49 /* HeaderSelectView.m */; };
 		9A7EB4561E543B960084AC49 /* SubclassController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9A7EB4551E543B960084AC49 /* SubclassController.m */; };
 		9A7EB45D1E5459B90084AC49 /* WaveAnimationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9A7EB45C1E5459B90084AC49 /* WaveAnimationController.m */; };
 		9A7EB4601E545E470084AC49 /* WaveView.m in Sources */ = {isa = PBXBuildFile; fileRef = 9A7EB45F1E545E470084AC49 /* WaveView.m */; };
+		9AAE83AB1EF23C1900396119 /* EditCellController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9AAE83AA1EF23C1900396119 /* EditCellController.m */; };
+		9AAE83AE1EF259DA00396119 /* EditCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 9AAE83AD1EF259DA00396119 /* EditCell.m */; };
 		9AB0638F1D7D404400AAEED5 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 9AB0638E1D7D404400AAEED5 /* main.m */; };
 		9AB063921D7D404400AAEED5 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 9AB063911D7D404400AAEED5 /* AppDelegate.m */; };
 		9AB063981D7D404400AAEED5 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9AB063961D7D404400AAEED5 /* Main.storyboard */; };
@@ -82,6 +88,14 @@
 		4B0286571D805A93003E9195 /* HaveMarginScrollController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HaveMarginScrollController.m; sourceTree = "<group>"; };
 		6FE3717741DD1FD8256D894B /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 		7570CE0B42E63E3E6DC8A580 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
+		9A27BAD41EA70A5C00690EEB /* MCRadarChartView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MCRadarChartView.h; sourceTree = "<group>"; };
+		9A27BAD51EA70A5C00690EEB /* MCRadarChartView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MCRadarChartView.m; sourceTree = "<group>"; };
+		9A27BAD61EA70A5C00690EEB /* MCRadarLayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MCRadarLayer.h; sourceTree = "<group>"; };
+		9A27BAD71EA70A5C00690EEB /* MCRadarLayer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MCRadarLayer.m; sourceTree = "<group>"; };
+		9A27BAD81EA70A5C00690EEB /* RadarView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RadarView.h; sourceTree = "<group>"; };
+		9A27BAD91EA70A5C00690EEB /* RadarView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RadarView.m; sourceTree = "<group>"; };
+		9A27BADA1EA70A5C00690EEB /* RCTRadarManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RCTRadarManager.h; sourceTree = "<group>"; };
+		9A27BADB1EA70A5C00690EEB /* RCTRadarManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RCTRadarManager.m; sourceTree = "<group>"; };
 		9A7EB44E1E5437AE0084AC49 /* HeaderSelectView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HeaderSelectView.h; sourceTree = "<group>"; };
 		9A7EB44F1E5437AE0084AC49 /* HeaderSelectView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HeaderSelectView.m; sourceTree = "<group>"; };
 		9A7EB4541E543B960084AC49 /* SubclassController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SubclassController.h; sourceTree = "<group>"; };
@@ -90,6 +104,10 @@
 		9A7EB45C1E5459B90084AC49 /* WaveAnimationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WaveAnimationController.m; sourceTree = "<group>"; };
 		9A7EB45E1E545E470084AC49 /* WaveView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WaveView.h; sourceTree = "<group>"; };
 		9A7EB45F1E545E470084AC49 /* WaveView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WaveView.m; sourceTree = "<group>"; };
+		9AAE83A91EF23C1900396119 /* EditCellController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EditCellController.h; sourceTree = "<group>"; };
+		9AAE83AA1EF23C1900396119 /* EditCellController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EditCellController.m; sourceTree = "<group>"; };
+		9AAE83AC1EF259DA00396119 /* EditCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EditCell.h; sourceTree = "<group>"; };
+		9AAE83AD1EF259DA00396119 /* EditCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EditCell.m; sourceTree = "<group>"; };
 		9AB0638A1D7D404400AAEED5 /* WKFAllMyDemos.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WKFAllMyDemos.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9AB0638E1D7D404400AAEED5 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		9AB063901D7D404400AAEED5 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -231,9 +249,25 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		9A27BAD31EA70A5C00690EEB /* Radar */ = {
+			isa = PBXGroup;
+			children = (
+				9A27BAD41EA70A5C00690EEB /* MCRadarChartView.h */,
+				9A27BAD51EA70A5C00690EEB /* MCRadarChartView.m */,
+				9A27BAD61EA70A5C00690EEB /* MCRadarLayer.h */,
+				9A27BAD71EA70A5C00690EEB /* MCRadarLayer.m */,
+				9A27BAD81EA70A5C00690EEB /* RadarView.h */,
+				9A27BAD91EA70A5C00690EEB /* RadarView.m */,
+				9A27BADA1EA70A5C00690EEB /* RCTRadarManager.h */,
+				9A27BADB1EA70A5C00690EEB /* RCTRadarManager.m */,
+			);
+			path = Radar;
+			sourceTree = "<group>";
+		};
 		9A7EB44C1E5437600084AC49 /* Common */ = {
 			isa = PBXGroup;
 			children = (
+				9A27BAD31EA70A5C00690EEB /* Radar */,
 				9A7EB44D1E5437770084AC49 /* ReusableView */,
 			);
 			path = Common;
@@ -257,6 +291,17 @@
 				9A7EB45C1E5459B90084AC49 /* WaveAnimationController.m */,
 			);
 			path = WaveAnimation;
+			sourceTree = "<group>";
+		};
+		9AAE83A81EF23B6900396119 /* TextViewCellGroup */ = {
+			isa = PBXGroup;
+			children = (
+				9AAE83A91EF23C1900396119 /* EditCellController.h */,
+				9AAE83AA1EF23C1900396119 /* EditCellController.m */,
+				9AAE83AC1EF259DA00396119 /* EditCell.h */,
+				9AAE83AD1EF259DA00396119 /* EditCell.m */,
+			);
+			path = TextViewCellGroup;
 			sourceTree = "<group>";
 		};
 		9AB063811D7D404400AAEED5 = {
@@ -285,6 +330,7 @@
 		9AB0638C1D7D404400AAEED5 /* WKFAllMyDemos */ = {
 			isa = PBXGroup;
 			children = (
+				9AAE83A81EF23B6900396119 /* TextViewCellGroup */,
 				9AC55D791E6698CD00510131 /* MoveAnimation */,
 				9A7EB45A1E5459790084AC49 /* WaveAnimation */,
 				4B02864E1D805A1D003E9195 /* HaveMarginScroll */,
@@ -631,11 +677,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9A27BADD1EA70A5C00690EEB /* MCRadarLayer.m in Sources */,
 				9AB063D11D7D706800AAEED5 /* MarqueeController.m in Sources */,
+				9A27BADF1EA70A5C00690EEB /* RCTRadarManager.m in Sources */,
+				9AAE83AB1EF23C1900396119 /* EditCellController.m in Sources */,
 				4B02864D1D8056BE003E9195 /* TimeTool.m in Sources */,
 				4B0286541D805A7B003E9195 /* RollingCircleView.m in Sources */,
 				9AB063CC1D7D490900AAEED5 /* HomeCell.m in Sources */,
 				9AB0D6771D7E5D07007E7CBD /* MyLabel.m in Sources */,
+				9A27BADE1EA70A5C00690EEB /* RadarView.m in Sources */,
 				9AB0D67D1D7E5D14007E7CBD /* MyCarGroupModel.m in Sources */,
 				9AC55D7F1E669BB600510131 /* CurveView.m in Sources */,
 				4B0286581D805A93003E9195 /* HaveMarginScrollController.m in Sources */,
@@ -647,6 +697,7 @@
 				9A7EB4601E545E470084AC49 /* WaveView.m in Sources */,
 				9A7EB4561E543B960084AC49 /* SubclassController.m in Sources */,
 				9AB063C91D7D447F00AAEED5 /* HomeModel.m in Sources */,
+				9A27BADC1EA70A5C00690EEB /* MCRadarChartView.m in Sources */,
 				9AB0639B1D7D404400AAEED5 /* WKFAllMyDemos.xcdatamodeld in Sources */,
 				9AB7AEBF1D7FA8F2002E22BF /* WKFCircularSlidingView.m in Sources */,
 				4B0286551D805A7B003E9195 /* RollingItemView.m in Sources */,
@@ -657,6 +708,7 @@
 				9AB7AEC21D7FA935002E22BF /* NoMarginScrollController.m in Sources */,
 				9AB063DC1D7D786800AAEED5 /* UIView+WKFFrame.m in Sources */,
 				9AB063C61D7D445C00AAEED5 /* ViewController.m in Sources */,
+				9AAE83AE1EF259DA00396119 /* EditCell.m in Sources */,
 				4B0286461D805466003E9195 /* PlayerProgressView.m in Sources */,
 				4B02864A1D805489003E9195 /* VideoDemoController.m in Sources */,
 				9AB0D66C1D7E5A11007E7CBD /* SuperController.m in Sources */,
