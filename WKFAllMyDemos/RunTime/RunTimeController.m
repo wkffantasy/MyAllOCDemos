@@ -86,8 +86,8 @@
 - (void)addPropertyDynamically {
     
     UIImageView * iconView = [[UIImageView alloc]init];
-//    UIImageView.name = @"testImageView";
-//    NSLog(@"UIImageView.name == %@",UIImageView.name);
+    iconView.name = @"testImageView";
+    NSLog(@"iconView.name == %@",iconView.name);
     
 }
 
