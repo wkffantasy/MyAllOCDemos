@@ -42,13 +42,8 @@
     
     [self sendMessageUseRunTime];
     [self exchangeMethodUseRunTime];
-//    [self addMethodDynamically];
-//    [self addPropertyDynamically];
-}
-
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
+    [self addMethodDynamically];
+    [self addPropertyDynamically];
 }
 
 #pragma 1、发送消息。
