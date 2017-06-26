@@ -91,7 +91,8 @@
     
     UIImageView * iconView = [[UIImageView alloc]init];
 //    UIImageView.name = @"testImageView";
-    NSLog(@"");
+//    NSLog(@"UIImageView.name == %@",UIImageView.name);
+    
 }
 
 @end
