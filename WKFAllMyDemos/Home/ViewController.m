@@ -65,8 +65,8 @@
   
   [super viewDidLoad];
   NSArray * selectTitlesArray = @[
-                                  @"OC-class",
                                   @"OC-demos",
+                                  @"OC-class",
                                   ];
   @weakify(self);
   HeaderSelectView * headerView = [[HeaderSelectView alloc]initWithTitleArray:selectTitlesArray andSeletedColor:RGBCOLOR(74, 153, 255) andNormalColor:RGBCOLOR(134, 134, 134)];
@@ -103,7 +103,7 @@
   }];
   
   SubclassController * classVC = [[SubclassController alloc]init];
-  classVC.dataArray = [self classArray];
+  classVC.dataArray = [self allDemosArray];
   classVC.clickCell = ^(HomeModel *model){
     
     @strongify(self);
@@ -121,7 +121,7 @@
   }];
   
   SubclassController * demoVC = [[SubclassController alloc]init];
-  demoVC.dataArray = [self allDemosArray];
+  demoVC.dataArray = [self classArray];
   demoVC.clickCell = ^(HomeModel *model){
     
     @strongify(self);
@@ -208,7 +208,7 @@
                           @{
                             @"title":@"RunTime",
                             @"titleDescription":@"runtime的一个学习",
-                            @"status":@"在写",
+                            @"status":@"完成吧",
                             @"jumeTo":NSStringFromSelector(@selector(jumpToRunTimeController)),
                             },
         
