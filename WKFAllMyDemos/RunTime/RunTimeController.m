@@ -43,7 +43,7 @@
     [self sendMessageUseRunTime];
     [self exchangeMethodUseRunTime];
 //    [self addMethodDynamically];
-    [self addPropertyDynamically];
+//    [self addPropertyDynamically];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -65,7 +65,8 @@
 - (void)exchangeMethodUseRunTime {
     
     NSLog(@"2,交换方法 exchangeMethodUseRunTime");
-    UIImage * image = [UIImage imageNamed:@"01"];
+    UIImage * image1 = [UIImage imageNamed:@"01"];
+    UIImage * image2 = [UIImage imageNamed:@"0000001"];
     
     
 }
