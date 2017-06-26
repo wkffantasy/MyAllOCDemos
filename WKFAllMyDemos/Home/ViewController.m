@@ -18,6 +18,7 @@
 #import "MoveAnimateController.h"
 #import "EditCellController.h"
 #import "SubclassController.h"
+#import "RunTimeController.h"
 
 
 
@@ -166,6 +167,9 @@
   
   [self.navigationController pushViewController:[AlphabetController new] animated:YES];
 }
+- (void)jumpToRunTimeController{
+  [self.navigationController pushViewController:[RunTimeController new] animated:YES];
+}
 - (void)jumpToMarqueeController{
 
   [self.navigationController pushViewController:[MarqueeController new] animated:YES];
@@ -202,10 +206,10 @@
   
   NSArray * dictArray = @[
                           @{
-                            @"title":@"Label的跑马灯效果",
-                            @"titleDescription":@"当文字超过一定的长度的时候，该文字会一直轮播下去，也就是跑马灯的效果",
-                            @"status":@"已经完成",
-                            @"jumeTo":NSStringFromSelector(@selector(jumpToMarqueeController)),
+                            @"title":@"RunTime",
+                            @"titleDescription":@"runtime的一个学习",
+                            @"status":@"在写",
+                            @"jumeTo":NSStringFromSelector(@selector(jumpToRunTimeController)),
                             },
         
                           ];

@@ -39,7 +39,7 @@
   HomeCell * cell = [HomeCell cellWithTableView:tableView];
   
   HomeModel * model = self.dataArray[indexPath.row];
-  NSLog(@"model.title == %@",model.title);
+//  NSLog(@"model.title == %@",model.title);
   
   cell.model = model;
   
