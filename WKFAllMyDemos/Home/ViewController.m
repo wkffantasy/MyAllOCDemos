@@ -18,8 +18,9 @@
 #import "MoveAnimateController.h"
 #import "EditCellController.h"
 #import "SubclassController.h"
-#import "RunTimeController.h"
 
+#import "RunTimeController.h"
+#import "WebViewController.h"
 
 
 //view
@@ -156,6 +157,7 @@
 }
 
 
+#pragma oc-demos
 //跳转的所有的controller
 
 - (void)jumpToWaveAnimationController {
@@ -167,9 +169,7 @@
   
   [self.navigationController pushViewController:[AlphabetController new] animated:YES];
 }
-- (void)jumpToRunTimeController{
-  [self.navigationController pushViewController:[RunTimeController new] animated:YES];
-}
+
 - (void)jumpToMarqueeController{
 
   [self.navigationController pushViewController:[MarqueeController new] animated:YES];
@@ -200,6 +200,16 @@
   
 }
 
+#pragma oc-class
+
+- (void)jumpToRunTimeController{
+   [self.navigationController pushViewController:[RunTimeController new] animated:YES];
+}
+
+- (void)jumpToWebViewController{
+   [self.navigationController pushViewController:[WebViewController new] animated:YES];
+}
+
 //dataSource
 
 - (NSArray *)classArray {
@@ -211,6 +221,13 @@
                             @"status":@"完成吧",
                             @"jumeTo":NSStringFromSelector(@selector(jumpToRunTimeController)),
                             },
+                          @{
+                             @"title":@"Webview and WKWebView",
+                             @"titleDescription":@"试一试",
+                             @"status":@"test",
+                             @"jumeTo":NSStringFromSelector(@selector(jumpToWebViewController)),
+                             },
+
         
                           ];
   
@@ -223,8 +240,6 @@
   }
   return dataArray;
   
-  
-  
 }
 
 - (NSArray *)allDemosArray {
@@ -233,13 +248,13 @@
                           @{
                               @"title":@"一个可编辑的tableView的cell",
                               @"titleDescription":@"。。。。",
-                              @"status":@"在写",
+                              @"status":@"完成",
                               @"jumeTo":NSStringFromSelector(@selector(jumpToEditViewController)),
                               },
                           @{
                             @"title":@"一个tableView的滑动带动 弧形和header的滑动",
                             @"titleDescription":@"。。。。",
-                            @"status":@"在写",
+                            @"status":@"完成",
                             @"jumeTo":NSStringFromSelector(@selector(jumpToMoveAnimationController)),
                             },
                           @{
@@ -303,7 +318,6 @@
   model.status = dict[@"status"];
   model.jumpTo = dict[@"jumeTo"];
   return model;
-  
   
 }
 

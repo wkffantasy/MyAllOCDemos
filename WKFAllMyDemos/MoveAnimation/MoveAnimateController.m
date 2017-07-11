@@ -59,6 +59,7 @@
 - (void)dealloc {
   
   [self.tableView removeObserver:self forKeyPath:@"contentOffset"];
+   NSLog(@"move animation controller will dealloc");
   
 }
 
@@ -95,6 +96,7 @@
 - (void)setupTableView {
   
   UITableView * tableView = [[UITableView alloc]initWithFrame:CGRectZero style:UITableViewStylePlain];
+  tableView.rowHeight = 100;
   _tableView =tableView;
   [tableView addObserver:self forKeyPath:@"contentOffset" options:NSKeyValueObservingOptionNew context:nil];
   tableView.delegate = self;
@@ -144,11 +146,6 @@
   
 }
 // about table view
-- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
-  
-  return 100;
-  
-}
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
   
   return  20;
@@ -161,11 +158,16 @@
   if (!cell) {
     cell = [[UITableViewCell alloc]initWithStyle:UITableViewCellStyleValue1 reuseIdentifier:cellId];
   }
+   cell.selectionStyle = UITableViewCellSelectionStyleNone;
   cell.textLabel.text = [NSString stringWithFormat:@"%ld",(long)indexPath.row];
   return cell;
   
   
 }
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
+   [self.navigationController popViewControllerAnimated:YES];
+}
+
 
 
 
