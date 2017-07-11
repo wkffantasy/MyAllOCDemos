@@ -37,8 +37,8 @@
   
   UIImage * image = nil;
   
-  NSURL *url = [NSURL URLWithString: [urlString stringByAddingPercentEscapesUsingEncoding:NSUTF8StringEncoding]];
-  
+  NSURL *url = [NSURL URLWithString:urlString];
+    
   SDImageCache *cache = [SDWebImageManager sharedManager].imageCache;
   
   NSString *key = [[SDWebImageManager sharedManager] cacheKeyForURL:url];
