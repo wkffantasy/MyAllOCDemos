@@ -42,7 +42,6 @@
 		9AB063C91D7D447F00AAEED5 /* HomeModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 9AB063C81D7D447F00AAEED5 /* HomeModel.m */; };
 		9AB063CC1D7D490900AAEED5 /* HomeCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 9AB063CB1D7D490900AAEED5 /* HomeCell.m */; };
 		9AB063D11D7D706800AAEED5 /* MarqueeController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9AB063D01D7D706800AAEED5 /* MarqueeController.m */; };
-		9AB063D41D7D709F00AAEED5 /* NavigationTitleView.m in Sources */ = {isa = PBXBuildFile; fileRef = 9AB063D31D7D709F00AAEED5 /* NavigationTitleView.m */; };
 		9AB063DC1D7D786800AAEED5 /* UIView+WKFFrame.m in Sources */ = {isa = PBXBuildFile; fileRef = 9AB063DB1D7D786800AAEED5 /* UIView+WKFFrame.m */; };
 		9AB063E01D7D788F00AAEED5 /* ImageSizeTool.m in Sources */ = {isa = PBXBuildFile; fileRef = 9AB063DF1D7D788F00AAEED5 /* ImageSizeTool.m */; };
 		9AB0D66C1D7E5A11007E7CBD /* SuperController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9AB0D66B1D7E5A11007E7CBD /* SuperController.m */; };
@@ -147,8 +146,6 @@
 		9AB063CD1D7D66E400AAEED5 /* AllMyDemos-PrefixHeader.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "AllMyDemos-PrefixHeader.pch"; sourceTree = "<group>"; };
 		9AB063CF1D7D706800AAEED5 /* MarqueeController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MarqueeController.h; sourceTree = "<group>"; };
 		9AB063D01D7D706800AAEED5 /* MarqueeController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MarqueeController.m; sourceTree = "<group>"; };
-		9AB063D21D7D709F00AAEED5 /* NavigationTitleView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NavigationTitleView.h; sourceTree = "<group>"; };
-		9AB063D31D7D709F00AAEED5 /* NavigationTitleView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NavigationTitleView.m; sourceTree = "<group>"; };
 		9AB063DA1D7D786800AAEED5 /* UIView+WKFFrame.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+WKFFrame.h"; sourceTree = "<group>"; };
 		9AB063DB1D7D786800AAEED5 /* UIView+WKFFrame.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+WKFFrame.m"; sourceTree = "<group>"; };
 		9AB063DE1D7D788F00AAEED5 /* ImageSizeTool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ImageSizeTool.h; sourceTree = "<group>"; };
@@ -438,8 +435,6 @@
 		9AB063CE1D7D6FFA00AAEED5 /* Marquee */ = {
 			isa = PBXGroup;
 			children = (
-				9AB063D21D7D709F00AAEED5 /* NavigationTitleView.h */,
-				9AB063D31D7D709F00AAEED5 /* NavigationTitleView.m */,
 				9AB063CF1D7D706800AAEED5 /* MarqueeController.h */,
 				9AB063D01D7D706800AAEED5 /* MarqueeController.m */,
 			);
@@ -702,13 +697,16 @@
 			files = (
 			);
 			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
 			);
 			name = "[CP] Check Pods Manifest.lock";
 			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-WKFAllMyDemos-checkManifestLockResult.txt",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -747,7 +745,6 @@
 				9A7EB45D1E5459B90084AC49 /* WaveAnimationController.m in Sources */,
 				9AB0D6821D7E5D48007E7CBD /* AlphabetController.m in Sources */,
 				9AB063921D7D404400AAEED5 /* AppDelegate.m in Sources */,
-				9AB063D41D7D709F00AAEED5 /* NavigationTitleView.m in Sources */,
 				9AB7AEC21D7FA935002E22BF /* NoMarginScrollController.m in Sources */,
 				9AB063DC1D7D786800AAEED5 /* UIView+WKFFrame.m in Sources */,
 				9A03DCF81F00E9FA00A31263 /* UIImageView+testExtension.m in Sources */,

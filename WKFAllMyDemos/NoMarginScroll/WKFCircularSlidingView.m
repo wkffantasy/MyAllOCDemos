@@ -220,6 +220,9 @@
   NSAssert(self.myImagesArray.count == imagesArray.count+2, @"");
 
 }
+- (void)dealloc {
+    NSLog(@"this view who has a timer will be dealloc");
+}
 
 
 

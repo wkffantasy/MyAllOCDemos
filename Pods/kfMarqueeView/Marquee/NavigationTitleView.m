@@ -8,12 +8,6 @@
 
 #import "NavigationTitleView.h"
 
-/**
- * default Color and Font
- */
-#define defaultColor WKFColor(81, 81, 81, 1)
-#define defaultFont  [UIFont systemFontOfSize:17]
-
 #define labelMargin  20
 
 @interface NavigationTitleView ()<UIScrollViewDelegate>
@@ -24,6 +18,7 @@
 
 @property (strong, nonatomic) UIFont * titleFont;
 @property (strong, nonatomic) UIColor * titleColor;
+
 
 @end
 
@@ -47,6 +42,7 @@
     
     self.clipsToBounds = YES;
     self.userInteractionEnabled = NO;
+      
     
     [self setupChildViewFrame:frame Text:text andTitleFont:font andTitleColor:color];
     
@@ -76,8 +72,8 @@
   
   [_containerView.layer removeAnimationForKey:@"containerView animation"];
   
-  font = font ? font : defaultFont;
-  color = color ? color : defaultColor;
+  font = font ? font : [UIFont systemFontOfSize:17];
+  color = color ? color : [UIColor colorWithRed:(81)/255. green:(81)/255. blue:(81)/255. alpha:(1)];
   
   self.titleFont = font;
   self.titleColor = color;
@@ -118,8 +114,8 @@
   } else {
     
     _lableSecond.hidden = NO;
-    _lableFirst.frame = CGRectMake(0, 0, rect.size.width, self.height);
-    _lableSecond.frame = CGRectMake(rect.size.width + labelMargin,0 , rect.size.width, self.height);
+    _lableFirst.frame = CGRectMake(0, 0, rect.size.width, self.frame.size.height);
+    _lableSecond.frame = CGRectMake(rect.size.width + labelMargin,0 , rect.size.width, self.frame.size.height);
     [self startToAnimate];
   }
 
@@ -131,9 +127,9 @@
   CGFloat speed = 20.0;
   CABasicAnimation * animate = [CABasicAnimation animation];
   animate.fromValue = @(0);
-  animate.toValue=@( - self.lableFirst.width - labelMargin);
+  animate.toValue=@( - self.lableFirst.frame.size.width - labelMargin);
   animate.keyPath = @"transform.translation.x";
-  animate.duration = (_lableFirst.width + labelMargin) / speed;
+  animate.duration = (_lableFirst.frame.size.width + labelMargin) / speed;
   animate.removedOnCompletion = YES;
   animate.repeatCount = MAXFLOAT;
   [_containerView.layer addAnimation:animate forKey:@"containerView animation"];

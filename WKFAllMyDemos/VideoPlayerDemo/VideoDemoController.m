@@ -40,6 +40,27 @@
         
     }];
     
+    [self test];
+    
+    
+}
+- (void)test {
+//    static double a = 10,b = 20;//全局变量
+    double a = 10,b = 20;//本地变量
+    typedef double (^MultiplyBlock)(void);
+    MultiplyBlock mul = ^(void){
+        return a * b;
+    };
+    NSLog(@"a * b ==%f",mul());
+    
+    a = 20;
+    b = 30;
+    
+    NSLog(@"a * b ==%f",mul());
+    
+          
+    
+    
     
 }
 
