@@ -21,7 +21,7 @@
 
 #import "RunTimeController.h"
 #import "WebViewController.h"
-
+#import "BaiduMapController.h"
 
 //view
 #import "HomeCell.h"
@@ -209,6 +209,9 @@
 - (void)jumpToWebViewController{
    [self.navigationController pushViewController:[WebViewController new] animated:YES];
 }
+- (void)jumpToBaiduMapController{
+    [self.navigationController pushViewController:[BaiduMapController new] animated:YES];
+}
 
 //dataSource
 
@@ -227,6 +230,12 @@
                              @"status":@"test",
                              @"jumeTo":NSStringFromSelector(@selector(jumpToWebViewController)),
                              },
+                          @{
+                              @"title":@"baidu map",
+                              @"titleDescription":@"试一试",
+                              @"status":@"learning",
+                              @"jumeTo":NSStringFromSelector(@selector(jumpToBaiduMapController)),
+                              },
 
         
                           ];
