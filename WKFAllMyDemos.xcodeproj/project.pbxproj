@@ -15,6 +15,7 @@
 		4B0286541D805A7B003E9195 /* RollingCircleView.m in Sources */ = {isa = PBXBuildFile; fileRef = 4B0286511D805A7B003E9195 /* RollingCircleView.m */; };
 		4B0286551D805A7B003E9195 /* RollingItemView.m in Sources */ = {isa = PBXBuildFile; fileRef = 4B0286531D805A7B003E9195 /* RollingItemView.m */; };
 		4B0286581D805A93003E9195 /* HaveMarginScrollController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4B0286571D805A93003E9195 /* HaveMarginScrollController.m */; };
+		4B068B3C1F1C9B5D0035B457 /* BaiduMapController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4B068B3B1F1C9B5D0035B457 /* BaiduMapController.m */; };
 		4B6E50511F14A66000272552 /* WebViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4B6E50501F14A66000272552 /* WebViewController.m */; };
 		9A03DCEF1F00D3A600A31263 /* RunTimeController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9A03DCEE1F00D3A600A31263 /* RunTimeController.m */; };
 		9A03DCF21F00D75E00A31263 /* UIImage+UIImage_extention.m in Sources */ = {isa = PBXBuildFile; fileRef = 9A03DCF11F00D75E00A31263 /* UIImage+UIImage_extention.m */; };
@@ -92,6 +93,8 @@
 		4B0286531D805A7B003E9195 /* RollingItemView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RollingItemView.m; sourceTree = "<group>"; };
 		4B0286561D805A93003E9195 /* HaveMarginScrollController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HaveMarginScrollController.h; sourceTree = "<group>"; };
 		4B0286571D805A93003E9195 /* HaveMarginScrollController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HaveMarginScrollController.m; sourceTree = "<group>"; };
+		4B068B3A1F1C9B5D0035B457 /* BaiduMapController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaiduMapController.h; sourceTree = "<group>"; };
+		4B068B3B1F1C9B5D0035B457 /* BaiduMapController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BaiduMapController.m; sourceTree = "<group>"; };
 		4B6E504F1F14A66000272552 /* WebViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WebViewController.h; sourceTree = "<group>"; };
 		4B6E50501F14A66000272552 /* WebViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WebViewController.m; sourceTree = "<group>"; };
 		9A03DCED1F00D3A600A31263 /* RunTimeController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RunTimeController.h; sourceTree = "<group>"; };
@@ -244,6 +247,15 @@
 			path = View;
 			sourceTree = "<group>";
 		};
+		4B068B391F1C9B340035B457 /* BaiduMapController */ = {
+			isa = PBXGroup;
+			children = (
+				4B068B3A1F1C9B5D0035B457 /* BaiduMapController.h */,
+				4B068B3B1F1C9B5D0035B457 /* BaiduMapController.m */,
+			);
+			path = BaiduMapController;
+			sourceTree = "<group>";
+		};
 		4B6E504E1F149A2A00272552 /* WebViewTest */ = {
 			isa = PBXGroup;
 			children = (
@@ -362,6 +374,7 @@
 		9AB0638C1D7D404400AAEED5 /* WKFAllMyDemos */ = {
 			isa = PBXGroup;
 			children = (
+				4B068B391F1C9B340035B457 /* BaiduMapController */,
 				4B6E504E1F149A2A00272552 /* WebViewTest */,
 				9A03DCEC1F00D37900A31263 /* RunTime */,
 				9AAE83A81EF23B6900396119 /* TextViewCellGroup */,
@@ -682,9 +695,12 @@
 			files = (
 			);
 			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-WKFAllMyDemos/Pods-WKFAllMyDemos-resources.sh",
+				"${PODS_ROOT}/BaiduMapKit/BaiduMapKit/BaiduMapAPI_Map.framework/Resources/mapapi.bundle",
 			);
 			name = "[CP] Copy Pods Resources";
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -731,6 +747,7 @@
 				9A03DCEF1F00D3A600A31263 /* RunTimeController.m in Sources */,
 				9AC55D7C1E66990100510131 /* MoveAnimateController.m in Sources */,
 				9AB0D67E1D7E5D14007E7CBD /* MyCarModel.m in Sources */,
+				4B068B3C1F1C9B5D0035B457 /* BaiduMapController.m in Sources */,
 				4B0286471D805466003E9195 /* VideoPlayController.m in Sources */,
 				9AB0D6751D7E5D07007E7CBD /* MyCarCell.m in Sources */,
 				9AB063E01D7D788F00AAEED5 /* ImageSizeTool.m in Sources */,

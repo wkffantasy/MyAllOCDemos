@@ -43,4 +43,6 @@ _Pragma("clang diagnostic pop")
 //category
 #import "UIView+WKFFrame.h"
 
+#define BaiduMapKey @"ZHGr4U8nOlTRc4LmieCrX1IrB99AfcN2"
+
 #endif /* AllMyDemos_PrefixHeader_pch */
