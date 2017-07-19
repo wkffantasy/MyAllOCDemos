@@ -28,7 +28,7 @@
     self.view = _mapView;
     // Do any additional setup after loading the view.
     
-    [self addressTo:@"保定"];
+    [self addressTo:@"软通大厦"];
     
     [self toAddress];
     
@@ -40,7 +40,7 @@
 - (void)twoPointDistance {
     BMKMapPoint point1 = BMKMapPointForCoordinate(CLLocationCoordinate2DMake(38.619992,114.704055));
     BMKMapPoint point2 = BMKMapPointForCoordinate(CLLocationCoordinate2DMake(38.867657,115.482331));
-    
+    //米
     CLLocationDistance distance = BMKMetersBetweenMapPoints(point1,point2);
     NSLog(@"distance == %f",distance);
     
@@ -76,6 +76,8 @@
             for (CLPlacemark* aPlacemark in placemarks)
             {
                 NSLog(@"place--%@", [aPlacemark locality]);
+                NSLog(@"subplace == %@",[aPlacemark subLocality]);
+                NSLog(@"省 == %@",[aPlacemark administrativeArea]);
                 NSLog(@"lat--%f--lon--%f",aPlacemark.location.coordinate.latitude,aPlacemark.location.coordinate.longitude);
             }
         }
