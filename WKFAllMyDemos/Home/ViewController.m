@@ -22,6 +22,8 @@
 #import "RunTimeController.h"
 #import "WebViewController.h"
 #import "BaiduMapController.h"
+#import "AlbumController.h"
+#import "VideoRecordController.h"
 
 //view
 #import "HomeCell.h"
@@ -212,6 +214,12 @@
 - (void)jumpToBaiduMapController{
     [self.navigationController pushViewController:[BaiduMapController new] animated:YES];
 }
+- (void)jumpToVideoRecordController{
+    [self.navigationController pushViewController:[VideoRecordController new] animated:YES];
+}
+- (void)jumpToAlbumController{
+    [self.navigationController pushViewController:[AlbumController new] animated:YES];
+}
 
 //dataSource
 
@@ -235,6 +243,18 @@
                               @"titleDescription":@"试一试",
                               @"status":@"learning",
                               @"jumeTo":NSStringFromSelector(@selector(jumpToBaiduMapController)),
+                              },
+                          @{
+                              @"title":@"视频录制",
+                              @"titleDescription":@"试一试",
+                              @"status":@"learning",
+                              @"jumeTo":NSStringFromSelector(@selector(jumpToVideoRecordController)),
+                              },
+                          @{
+                              @"title":@"打开相册",
+                              @"titleDescription":@"试一试",
+                              @"status":@"learning",
+                              @"jumeTo":NSStringFromSelector(@selector(jumpToAlbumController)),
                               },
 
         

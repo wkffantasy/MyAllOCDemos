@@ -17,6 +17,8 @@
 		4B0286581D805A93003E9195 /* HaveMarginScrollController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4B0286571D805A93003E9195 /* HaveMarginScrollController.m */; };
 		4B068B3C1F1C9B5D0035B457 /* BaiduMapController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4B068B3B1F1C9B5D0035B457 /* BaiduMapController.m */; };
 		4B6E50511F14A66000272552 /* WebViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4B6E50501F14A66000272552 /* WebViewController.m */; };
+		4BE19B051F1EFD4100F14A15 /* AlbumController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4BE19B041F1EFD4100F14A15 /* AlbumController.m */; };
+		4BE19B091F1EFF5A00F14A15 /* VideoRecordController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4BE19B081F1EFF5A00F14A15 /* VideoRecordController.m */; };
 		9A03DCEF1F00D3A600A31263 /* RunTimeController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9A03DCEE1F00D3A600A31263 /* RunTimeController.m */; };
 		9A03DCF21F00D75E00A31263 /* UIImage+UIImage_extention.m in Sources */ = {isa = PBXBuildFile; fileRef = 9A03DCF11F00D75E00A31263 /* UIImage+UIImage_extention.m */; };
 		9A03DCF51F00E2F100A31263 /* Student.m in Sources */ = {isa = PBXBuildFile; fileRef = 9A03DCF41F00E2F100A31263 /* Student.m */; };
@@ -97,6 +99,10 @@
 		4B068B3B1F1C9B5D0035B457 /* BaiduMapController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BaiduMapController.m; sourceTree = "<group>"; };
 		4B6E504F1F14A66000272552 /* WebViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WebViewController.h; sourceTree = "<group>"; };
 		4B6E50501F14A66000272552 /* WebViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WebViewController.m; sourceTree = "<group>"; };
+		4BE19B031F1EFD4100F14A15 /* AlbumController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AlbumController.h; sourceTree = "<group>"; };
+		4BE19B041F1EFD4100F14A15 /* AlbumController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AlbumController.m; sourceTree = "<group>"; };
+		4BE19B071F1EFF5A00F14A15 /* VideoRecordController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VideoRecordController.h; sourceTree = "<group>"; };
+		4BE19B081F1EFF5A00F14A15 /* VideoRecordController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VideoRecordController.m; sourceTree = "<group>"; };
 		9A03DCED1F00D3A600A31263 /* RunTimeController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RunTimeController.h; sourceTree = "<group>"; };
 		9A03DCEE1F00D3A600A31263 /* RunTimeController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RunTimeController.m; sourceTree = "<group>"; };
 		9A03DCF01F00D75E00A31263 /* UIImage+UIImage_extention.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+UIImage_extention.h"; sourceTree = "<group>"; };
@@ -265,6 +271,24 @@
 			path = WebViewTest;
 			sourceTree = "<group>";
 		};
+		4BE19B021F1EFCB000F14A15 /* Album */ = {
+			isa = PBXGroup;
+			children = (
+				4BE19B031F1EFD4100F14A15 /* AlbumController.h */,
+				4BE19B041F1EFD4100F14A15 /* AlbumController.m */,
+			);
+			path = Album;
+			sourceTree = "<group>";
+		};
+		4BE19B061F1EFECE00F14A15 /* VideoRecord */ = {
+			isa = PBXGroup;
+			children = (
+				4BE19B071F1EFF5A00F14A15 /* VideoRecordController.h */,
+				4BE19B081F1EFF5A00F14A15 /* VideoRecordController.m */,
+			);
+			path = VideoRecord;
+			sourceTree = "<group>";
+		};
 		543E189C43BAA004669F0CB7 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -374,6 +398,8 @@
 		9AB0638C1D7D404400AAEED5 /* WKFAllMyDemos */ = {
 			isa = PBXGroup;
 			children = (
+				4BE19B061F1EFECE00F14A15 /* VideoRecord */,
+				4BE19B021F1EFCB000F14A15 /* Album */,
 				4B068B391F1C9B340035B457 /* BaiduMapController */,
 				4B6E504E1F149A2A00272552 /* WebViewTest */,
 				9A03DCEC1F00D37900A31263 /* RunTime */,
@@ -733,6 +759,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				9A27BADD1EA70A5C00690EEB /* MCRadarLayer.m in Sources */,
+				4BE19B051F1EFD4100F14A15 /* AlbumController.m in Sources */,
 				9AB063D11D7D706800AAEED5 /* MarqueeController.m in Sources */,
 				9A27BADF1EA70A5C00690EEB /* RCTRadarManager.m in Sources */,
 				9AAE83AB1EF23C1900396119 /* EditCellController.m in Sources */,
@@ -775,6 +802,7 @@
 				9A7EB4501E5437AE0084AC49 /* HeaderSelectView.m in Sources */,
 				9AB0D6761D7E5D07007E7CBD /* MyCarsView.m in Sources */,
 				9AB0638F1D7D404400AAEED5 /* main.m in Sources */,
+				4BE19B091F1EFF5A00F14A15 /* VideoRecordController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
