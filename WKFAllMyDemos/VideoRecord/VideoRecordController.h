@@ -10,4 +10,6 @@
 
 @interface VideoRecordController : UIViewController
 
+@property float totalTime; //视频总长度 默认10秒
+
 @end

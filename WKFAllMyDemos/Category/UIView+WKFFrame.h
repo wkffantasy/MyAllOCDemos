@@ -21,4 +21,6 @@
 @property (nonatomic, assign) CGFloat y;
 
 
+-(void)makeCornerRadius:(float)radius borderColor:(UIColor*)bColor borderWidth:(float)bWidth;
+
 @end

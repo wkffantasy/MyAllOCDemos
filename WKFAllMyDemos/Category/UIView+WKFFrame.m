@@ -56,4 +56,15 @@
     return self.frame.origin.y;
 }
 
+
+-(void)makeCornerRadius:(float)radius borderColor:(UIColor *)bColor borderWidth:(float)bWidth{
+    self.layer.borderWidth = bWidth;
+    
+    if (bColor != nil) {
+        self.layer.borderColor = bColor.CGColor;
+    }
+    
+    self.layer.cornerRadius = radius;
+    self.layer.masksToBounds = YES;
+}
 @end

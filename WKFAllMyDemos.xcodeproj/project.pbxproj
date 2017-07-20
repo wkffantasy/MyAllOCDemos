@@ -16,6 +16,12 @@
 		4B0286551D805A7B003E9195 /* RollingItemView.m in Sources */ = {isa = PBXBuildFile; fileRef = 4B0286531D805A7B003E9195 /* RollingItemView.m */; };
 		4B0286581D805A93003E9195 /* HaveMarginScrollController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4B0286571D805A93003E9195 /* HaveMarginScrollController.m */; };
 		4B068B3C1F1C9B5D0035B457 /* BaiduMapController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4B068B3B1F1C9B5D0035B457 /* BaiduMapController.m */; };
+		4B47EE461F20469A00D1E7D4 /* changeCamer.png in Resources */ = {isa = PBXBuildFile; fileRef = 4B47EE401F20469A00D1E7D4 /* changeCamer.png */; };
+		4B47EE471F20469A00D1E7D4 /* flashOff.png in Resources */ = {isa = PBXBuildFile; fileRef = 4B47EE411F20469A00D1E7D4 /* flashOff.png */; };
+		4B47EE481F20469A00D1E7D4 /* flashOn.png in Resources */ = {isa = PBXBuildFile; fileRef = 4B47EE421F20469A00D1E7D4 /* flashOn.png */; };
+		4B47EE491F20469A00D1E7D4 /* focusImg.png in Resources */ = {isa = PBXBuildFile; fileRef = 4B47EE431F20469A00D1E7D4 /* focusImg.png */; };
+		4B47EE4A1F20469A00D1E7D4 /* shootFinish.png in Resources */ = {isa = PBXBuildFile; fileRef = 4B47EE441F20469A00D1E7D4 /* shootFinish.png */; };
+		4B47EE4B1F20469A00D1E7D4 /* videoPlay.png in Resources */ = {isa = PBXBuildFile; fileRef = 4B47EE451F20469A00D1E7D4 /* videoPlay.png */; };
 		4B6E50511F14A66000272552 /* WebViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4B6E50501F14A66000272552 /* WebViewController.m */; };
 		4BE19B051F1EFD4100F14A15 /* AlbumController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4BE19B041F1EFD4100F14A15 /* AlbumController.m */; };
 		4BE19B091F1EFF5A00F14A15 /* VideoRecordController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4BE19B081F1EFF5A00F14A15 /* VideoRecordController.m */; };
@@ -97,6 +103,12 @@
 		4B0286571D805A93003E9195 /* HaveMarginScrollController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HaveMarginScrollController.m; sourceTree = "<group>"; };
 		4B068B3A1F1C9B5D0035B457 /* BaiduMapController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaiduMapController.h; sourceTree = "<group>"; };
 		4B068B3B1F1C9B5D0035B457 /* BaiduMapController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BaiduMapController.m; sourceTree = "<group>"; };
+		4B47EE401F20469A00D1E7D4 /* changeCamer.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = changeCamer.png; sourceTree = "<group>"; };
+		4B47EE411F20469A00D1E7D4 /* flashOff.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = flashOff.png; sourceTree = "<group>"; };
+		4B47EE421F20469A00D1E7D4 /* flashOn.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = flashOn.png; sourceTree = "<group>"; };
+		4B47EE431F20469A00D1E7D4 /* focusImg.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = focusImg.png; sourceTree = "<group>"; };
+		4B47EE441F20469A00D1E7D4 /* shootFinish.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = shootFinish.png; sourceTree = "<group>"; };
+		4B47EE451F20469A00D1E7D4 /* videoPlay.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = videoPlay.png; sourceTree = "<group>"; };
 		4B6E504F1F14A66000272552 /* WebViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WebViewController.h; sourceTree = "<group>"; };
 		4B6E50501F14A66000272552 /* WebViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WebViewController.m; sourceTree = "<group>"; };
 		4BE19B031F1EFD4100F14A15 /* AlbumController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AlbumController.h; sourceTree = "<group>"; };
@@ -285,6 +297,12 @@
 			children = (
 				4BE19B071F1EFF5A00F14A15 /* VideoRecordController.h */,
 				4BE19B081F1EFF5A00F14A15 /* VideoRecordController.m */,
+				4B47EE401F20469A00D1E7D4 /* changeCamer.png */,
+				4B47EE411F20469A00D1E7D4 /* flashOff.png */,
+				4B47EE421F20469A00D1E7D4 /* flashOn.png */,
+				4B47EE431F20469A00D1E7D4 /* focusImg.png */,
+				4B47EE441F20469A00D1E7D4 /* shootFinish.png */,
+				4B47EE451F20469A00D1E7D4 /* videoPlay.png */,
 			);
 			path = VideoRecord;
 			sourceTree = "<group>";
@@ -678,7 +696,13 @@
 			files = (
 				9AB063A01D7D404400AAEED5 /* LaunchScreen.storyboard in Resources */,
 				9AB0639D1D7D404400AAEED5 /* Assets.xcassets in Resources */,
+				4B47EE481F20469A00D1E7D4 /* flashOn.png in Resources */,
+				4B47EE4B1F20469A00D1E7D4 /* videoPlay.png in Resources */,
 				9AB0D6841D7E5E1F007E7CBD /* cars_total.plist in Resources */,
+				4B47EE491F20469A00D1E7D4 /* focusImg.png in Resources */,
+				4B47EE461F20469A00D1E7D4 /* changeCamer.png in Resources */,
+				4B47EE471F20469A00D1E7D4 /* flashOff.png in Resources */,
+				4B47EE4A1F20469A00D1E7D4 /* shootFinish.png in Resources */,
 				9AB063981D7D404400AAEED5 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
