@@ -8,6 +8,8 @@
 
 #import "VideoRecordController.h"
 
+#import "PlayRecordVideoController.h"
+
 #import <AVFoundation/AVFoundation.h>
 
 #import <AssetsLibrary/AssetsLibrary.h>
@@ -54,14 +56,6 @@ typedef void(^PropertyChangeBlock)(AVCaptureDevice *captureDevice);
     
 }
 @synthesize totalTime;
-
-- (instancetype)init {
-    if (self = [super init]) {
-    
-    }
-    return self;
-}
-
 
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -137,6 +131,10 @@ typedef void(^PropertyChangeBlock)(AVCaptureDevice *captureDevice);
     NSError *error=nil;
     //根据输入设备初始化设备输入对象，用于获得输入数据
     _captureDeviceInput=[[AVCaptureDeviceInput alloc]initWithDevice:captureDevice error:&error];
+    if (error) {
+        NSLog(@"初始化输入对象时出错，错误是 ==%@",error.localizedDescription);
+        NSAssert(false, @"");
+    }
     
     AVCaptureDeviceInput *audioCaptureDeviceInput=[[AVCaptureDeviceInput alloc]initWithDevice:audioCaptureDevice error:&error];
     
@@ -148,7 +146,7 @@ typedef void(^PropertyChangeBlock)(AVCaptureDevice *captureDevice);
         [_captureSession addInput:_captureDeviceInput];
         [_captureSession addInput:audioCaptureDeviceInput];
         AVCaptureConnection *captureConnection=[_captureMovieFileOutput connectionWithMediaType:AVMediaTypeVideo];
-        if ([captureConnection isVideoStabilizationSupported ]) {
+        if ([captureConnection isVideoStabilizationSupported]) {
             captureConnection.preferredVideoStabilizationMode=AVCaptureVideoStabilizationModeAuto;
         }
     }
@@ -168,7 +166,7 @@ typedef void(^PropertyChangeBlock)(AVCaptureDevice *captureDevice);
     _captureVideoPreviewLayer.videoGravity=AVLayerVideoGravityResizeAspectFill;//填充模式
     [layer insertSublayer:_captureVideoPreviewLayer below:self.focusCursor.layer];
     
-    [self addGenstureRecognizer];
+//    [self addGenstureRecognizer];
     
     //进度条
     progressPreView = [[UIView alloc]initWithFrame:CGRectMake(0, preLayerHeight, 0, 4)];
@@ -211,7 +209,6 @@ typedef void(^PropertyChangeBlock)(AVCaptureDevice *captureDevice);
 }
 
 -(void)stopTimer{
-    shootBt.backgroundColor = HEXRGBCOLOR(0xfa5f66);
     
     [countTimer invalidate];
     countTimer = nil;
@@ -228,8 +225,7 @@ typedef void(^PropertyChangeBlock)(AVCaptureDevice *captureDevice);
     
     //时间到了停止录制视频
     if (currentTime>=totalTime) {
-        [countTimer invalidate];
-        countTimer = nil;
+        [self stopTimer];
         [_captureMovieFileOutput stopRecording];
     }
     
@@ -237,8 +233,7 @@ typedef void(^PropertyChangeBlock)(AVCaptureDevice *captureDevice);
 -(void)finishBtTap{
     
     currentTime=totalTime+10;
-    [countTimer invalidate];
-    countTimer = nil;
+    [self stopTimer];
     
     //正在拍摄
     if (_captureMovieFileOutput.isRecording) {
@@ -258,11 +253,11 @@ typedef void(^PropertyChangeBlock)(AVCaptureDevice *captureDevice);
     [self.captureSession stopRunning];
     
     //还原数据-----------
-    [self deleteAllVideos];
     currentTime = 0;
     [progressPreView setFrame:CGRectMake(0, preLayerHeight, 0, 4)];
     shootBt.backgroundColor = HEXRGBCOLOR(0xfa5f66);
     finishBt.hidden = YES;
+    [self stopTimer];
 }
 
 #pragma mark 视频录制
@@ -279,6 +274,7 @@ typedef void(^PropertyChangeBlock)(AVCaptureDevice *captureDevice);
     }
     else{
         [self stopTimer];
+        shootBt.backgroundColor = HEXRGBCOLOR(0xfa5f66);
         [self.captureMovieFileOutput stopRecording];//停止录制
     }
 }
@@ -416,10 +412,9 @@ typedef void(^PropertyChangeBlock)(AVCaptureDevice *captureDevice);
     [exporter exportAsynchronouslyWithCompletionHandler:^{
         dispatch_async(dispatch_get_main_queue(), ^{
             
-            NSLog(@"do something");
-//            PlayVideoViewController* view = [[PlayVideoViewController alloc]init];
-//            view.videoURL =mergeFileURL;
-//            [self.navigationController pushViewController:view animated:YES];
+            PlayRecordVideoController * playRecordViewVC = [[PlayRecordVideoController alloc]init];
+            playRecordViewVC.videoURL =mergeFileURL;
+            [self.navigationController pushViewController:playRecordViewVC animated:YES];
             
         });
     }];
@@ -459,17 +454,23 @@ typedef void(^PropertyChangeBlock)(AVCaptureDevice *captureDevice);
     
     return fileName;
 }
-
-- (void)createVideoFolderIfNotExist
-{
+- (NSString *)getVideoFilePath {
+    
     NSArray *paths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
     NSString *path = [paths objectAtIndex:0];
     
     NSString *folderPath = [path stringByAppendingPathComponent:VIDEO_FOLDER];
+    return folderPath;
+    
+}
+- (void)createVideoFolderIfNotExist
+{
+    NSString *folderPath = [self getVideoFilePath];
     
     NSFileManager *fileManager = [NSFileManager defaultManager];
     BOOL isDir = NO;
     BOOL isDirExist = [fileManager fileExistsAtPath:folderPath isDirectory:&isDir];
+    NSLog(@"folderPath ==%@",folderPath);
     
     if(!(isDirExist && isDir))
     {
@@ -491,6 +492,8 @@ typedef void(^PropertyChangeBlock)(AVCaptureDevice *captureDevice);
                 
                 if (error) {
                     NSLog(@"delete All Video 删除视频文件出错:%@", error);
+                } else {
+                    NSLog(@"delete all video success");
                 }
             }
         });
@@ -545,48 +548,49 @@ typedef void(^PropertyChangeBlock)(AVCaptureDevice *captureDevice);
     }];
 }
 
--(void)focusWithMode:(AVCaptureFocusMode)focusMode exposureMode:(AVCaptureExposureMode)exposureMode atPoint:(CGPoint)point{
-    [self changeDeviceProperty:^(AVCaptureDevice *captureDevice) {
-        if ([captureDevice isFocusModeSupported:focusMode]) {
-            [captureDevice setFocusMode:AVCaptureFocusModeAutoFocus];
-        }
-        if ([captureDevice isFocusPointOfInterestSupported]) {
-            [captureDevice setFocusPointOfInterest:point];
-        }
-        if ([captureDevice isExposureModeSupported:exposureMode]) {
-            [captureDevice setExposureMode:AVCaptureExposureModeAutoExpose];
-        }
-        if ([captureDevice isExposurePointOfInterestSupported]) {
-            [captureDevice setExposurePointOfInterest:point];
-        }
-    }];
-}
+//-(void)focusWithMode:(AVCaptureFocusMode)focusMode exposureMode:(AVCaptureExposureMode)exposureMode atPoint:(CGPoint)point{
+//    [self changeDeviceProperty:^(AVCaptureDevice *captureDevice) {
+//        if ([captureDevice isFocusModeSupported:focusMode]) {
+//            [captureDevice setFocusMode:AVCaptureFocusModeAutoFocus];
+//        }
+//        if ([captureDevice isFocusPointOfInterestSupported]) {
+//            [captureDevice setFocusPointOfInterest:point];
+//        }
+//        if ([captureDevice isExposureModeSupported:exposureMode]) {
+//            [captureDevice setExposureMode:AVCaptureExposureModeAutoExpose];
+//        }
+//        if ([captureDevice isExposurePointOfInterestSupported]) {
+//            [captureDevice setExposurePointOfInterest:point];
+//        }
+//    }];
+//}
 
--(void)addGenstureRecognizer{
-    UITapGestureRecognizer *tapGesture=[[UITapGestureRecognizer alloc]initWithTarget:self action:@selector(tapScreen:)];
-    [self.viewContainer addGestureRecognizer:tapGesture];
-}
--(void)tapScreen:(UITapGestureRecognizer *)tapGesture{
-    CGPoint point= [tapGesture locationInView:self.viewContainer];
-    //将UI坐标转化为摄像头坐标
-    CGPoint cameraPoint= [self.captureVideoPreviewLayer captureDevicePointOfInterestForPoint:point];
-    [self setFocusCursorWithPoint:point];
-    [self focusWithMode:AVCaptureFocusModeAutoFocus exposureMode:AVCaptureExposureModeAutoExpose atPoint:cameraPoint];
-}
+//-(void)addGenstureRecognizer{
+//    UITapGestureRecognizer *tapGesture=[[UITapGestureRecognizer alloc]initWithTarget:self action:@selector(tapScreen:)];
+//    [self.viewContainer addGestureRecognizer:tapGesture];
+//}
+//-(void)tapScreen:(UITapGestureRecognizer *)tapGesture{
+//    CGPoint point= [tapGesture locationInView:self.viewContainer];
+//    //将UI坐标转化为摄像头坐标
+//    CGPoint cameraPoint= [self.captureVideoPreviewLayer captureDevicePointOfInterestForPoint:point];
+//    [self setFocusCursorWithPoint:point];
+//    [self focusWithMode:AVCaptureFocusModeAutoFocus exposureMode:AVCaptureExposureModeAutoExpose atPoint:cameraPoint];
+//}
 
--(void)setFocusCursorWithPoint:(CGPoint)point{
-    self.focusCursor.center=point;
-    self.focusCursor.transform=CGAffineTransformMakeScale(1.5, 1.5);
-    self.focusCursor.alpha=1.0;
-    [UIView animateWithDuration:1.0 animations:^{
-        self.focusCursor.transform=CGAffineTransformIdentity;
-    } completion:^(BOOL finished) {
-        self.focusCursor.alpha=0;
-        
-    }];
-}
+//-(void)setFocusCursorWithPoint:(CGPoint)point{
+//    self.focusCursor.center=point;
+//    self.focusCursor.transform=CGAffineTransformMakeScale(1.5, 1.5);
+//    self.focusCursor.alpha=1.0;
+//    [UIView animateWithDuration:1.0 animations:^{
+//        self.focusCursor.transform=CGAffineTransformIdentity;
+//    } completion:^(BOOL finished) {
+//        self.focusCursor.alpha=0;
+//        
+//    }];
+//}
 
 - (void)dealloc {
+    [self deleteAllVideos];
     NSLog(@"视频录制controller dealloc");
 }
 

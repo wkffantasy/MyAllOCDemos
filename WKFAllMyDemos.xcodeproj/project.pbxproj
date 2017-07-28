@@ -22,7 +22,11 @@
 		4B47EE491F20469A00D1E7D4 /* focusImg.png in Resources */ = {isa = PBXBuildFile; fileRef = 4B47EE431F20469A00D1E7D4 /* focusImg.png */; };
 		4B47EE4A1F20469A00D1E7D4 /* shootFinish.png in Resources */ = {isa = PBXBuildFile; fileRef = 4B47EE441F20469A00D1E7D4 /* shootFinish.png */; };
 		4B47EE4B1F20469A00D1E7D4 /* videoPlay.png in Resources */ = {isa = PBXBuildFile; fileRef = 4B47EE451F20469A00D1E7D4 /* videoPlay.png */; };
+		4B47EE4E1F2049BD00D1E7D4 /* PlayRecordVideoController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4B47EE4D1F2049BD00D1E7D4 /* PlayRecordVideoController.m */; };
 		4B6E50511F14A66000272552 /* WebViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4B6E50501F14A66000272552 /* WebViewController.m */; };
+		4B6F852B1F2AD13000E176E0 /* IdentifyingCodeController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4B6F852A1F2AD13000E176E0 /* IdentifyingCodeController.m */; };
+		4B6F852D1F2AD16600E176E0 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4B6F852C1F2AD16600E176E0 /* CoreGraphics.framework */; };
+		4B6F85301F2AD18300E176E0 /* AuthcodeView.m in Sources */ = {isa = PBXBuildFile; fileRef = 4B6F852F1F2AD18300E176E0 /* AuthcodeView.m */; };
 		4BE19B051F1EFD4100F14A15 /* AlbumController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4BE19B041F1EFD4100F14A15 /* AlbumController.m */; };
 		4BE19B091F1EFF5A00F14A15 /* VideoRecordController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4BE19B081F1EFF5A00F14A15 /* VideoRecordController.m */; };
 		9A03DCEF1F00D3A600A31263 /* RunTimeController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9A03DCEE1F00D3A600A31263 /* RunTimeController.m */; };
@@ -109,8 +113,15 @@
 		4B47EE431F20469A00D1E7D4 /* focusImg.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = focusImg.png; sourceTree = "<group>"; };
 		4B47EE441F20469A00D1E7D4 /* shootFinish.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = shootFinish.png; sourceTree = "<group>"; };
 		4B47EE451F20469A00D1E7D4 /* videoPlay.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = videoPlay.png; sourceTree = "<group>"; };
+		4B47EE4C1F2049BD00D1E7D4 /* PlayRecordVideoController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PlayRecordVideoController.h; sourceTree = "<group>"; };
+		4B47EE4D1F2049BD00D1E7D4 /* PlayRecordVideoController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PlayRecordVideoController.m; sourceTree = "<group>"; };
 		4B6E504F1F14A66000272552 /* WebViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WebViewController.h; sourceTree = "<group>"; };
 		4B6E50501F14A66000272552 /* WebViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WebViewController.m; sourceTree = "<group>"; };
+		4B6F85291F2AD13000E176E0 /* IdentifyingCodeController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IdentifyingCodeController.h; sourceTree = "<group>"; };
+		4B6F852A1F2AD13000E176E0 /* IdentifyingCodeController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IdentifyingCodeController.m; sourceTree = "<group>"; };
+		4B6F852C1F2AD16600E176E0 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		4B6F852E1F2AD18300E176E0 /* AuthcodeView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AuthcodeView.h; sourceTree = "<group>"; };
+		4B6F852F1F2AD18300E176E0 /* AuthcodeView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AuthcodeView.m; sourceTree = "<group>"; };
 		4BE19B031F1EFD4100F14A15 /* AlbumController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AlbumController.h; sourceTree = "<group>"; };
 		4BE19B041F1EFD4100F14A15 /* AlbumController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AlbumController.m; sourceTree = "<group>"; };
 		4BE19B071F1EFF5A00F14A15 /* VideoRecordController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VideoRecordController.h; sourceTree = "<group>"; };
@@ -202,6 +213,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4B6F852D1F2AD16600E176E0 /* CoreGraphics.framework in Frameworks */,
 				1D38FAE4CF866C5793C0A524 /* libPods-WKFAllMyDemos.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -283,6 +295,17 @@
 			path = WebViewTest;
 			sourceTree = "<group>";
 		};
+		4B6F85281F2AD0E800E176E0 /* IdentifyingCode */ = {
+			isa = PBXGroup;
+			children = (
+				4B6F85291F2AD13000E176E0 /* IdentifyingCodeController.h */,
+				4B6F852A1F2AD13000E176E0 /* IdentifyingCodeController.m */,
+				4B6F852E1F2AD18300E176E0 /* AuthcodeView.h */,
+				4B6F852F1F2AD18300E176E0 /* AuthcodeView.m */,
+			);
+			path = IdentifyingCode;
+			sourceTree = "<group>";
+		};
 		4BE19B021F1EFCB000F14A15 /* Album */ = {
 			isa = PBXGroup;
 			children = (
@@ -303,6 +326,8 @@
 				4B47EE431F20469A00D1E7D4 /* focusImg.png */,
 				4B47EE441F20469A00D1E7D4 /* shootFinish.png */,
 				4B47EE451F20469A00D1E7D4 /* videoPlay.png */,
+				4B47EE4C1F2049BD00D1E7D4 /* PlayRecordVideoController.h */,
+				4B47EE4D1F2049BD00D1E7D4 /* PlayRecordVideoController.m */,
 			);
 			path = VideoRecord;
 			sourceTree = "<group>";
@@ -310,6 +335,7 @@
 		543E189C43BAA004669F0CB7 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				4B6F852C1F2AD16600E176E0 /* CoreGraphics.framework */,
 				0FE84FE4B1CACF0435BC950A /* libPods-WKFAllMyDemos.a */,
 			);
 			name = Frameworks;
@@ -416,6 +442,7 @@
 		9AB0638C1D7D404400AAEED5 /* WKFAllMyDemos */ = {
 			isa = PBXGroup;
 			children = (
+				4B6F85281F2AD0E800E176E0 /* IdentifyingCode */,
 				4BE19B061F1EFECE00F14A15 /* VideoRecord */,
 				4BE19B021F1EFCB000F14A15 /* Album */,
 				4B068B391F1C9B340035B457 /* BaiduMapController */,
@@ -657,7 +684,7 @@
 				TargetAttributes = {
 					9AB063891D7D404400AAEED5 = {
 						CreatedOnToolsVersion = 7.3;
-						DevelopmentTeam = ZZ9329T9X9;
+						DevelopmentTeam = QYZA666689;
 					};
 					9AB063A51D7D404500AAEED5 = {
 						CreatedOnToolsVersion = 7.3;
@@ -794,6 +821,7 @@
 				9A27BADE1EA70A5C00690EEB /* RadarView.m in Sources */,
 				9AB0D67D1D7E5D14007E7CBD /* MyCarGroupModel.m in Sources */,
 				9AC55D7F1E669BB600510131 /* CurveView.m in Sources */,
+				4B47EE4E1F2049BD00D1E7D4 /* PlayRecordVideoController.m in Sources */,
 				4B0286581D805A93003E9195 /* HaveMarginScrollController.m in Sources */,
 				9A03DCEF1F00D3A600A31263 /* RunTimeController.m in Sources */,
 				9AC55D7C1E66990100510131 /* MoveAnimateController.m in Sources */,
@@ -814,6 +842,8 @@
 				9AB0D6821D7E5D48007E7CBD /* AlphabetController.m in Sources */,
 				9AB063921D7D404400AAEED5 /* AppDelegate.m in Sources */,
 				9AB7AEC21D7FA935002E22BF /* NoMarginScrollController.m in Sources */,
+				4B6F85301F2AD18300E176E0 /* AuthcodeView.m in Sources */,
+				4B6F852B1F2AD13000E176E0 /* IdentifyingCodeController.m in Sources */,
 				9AB063DC1D7D786800AAEED5 /* UIView+WKFFrame.m in Sources */,
 				9A03DCF81F00E9FA00A31263 /* UIImageView+testExtension.m in Sources */,
 				9AB063C61D7D445C00AAEED5 /* ViewController.m in Sources */,
@@ -970,13 +1000,15 @@
 			baseConfigurationReference = 2A869E71275E5BF320007B44 /* Pods-WKFAllMyDemos.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = ZZ9329T9X9;
+				DEVELOPMENT_TEAM = QYZA666689;
 				ENABLE_STRICT_OBJC_MSGSEND = NO;
 				GCC_PREFIX_HEADER = "$(SRCROOT)/WKFAllMyDemos/AllMyDemos-PrefixHeader.pch";
 				INFOPLIST_FILE = WKFAllMyDemos/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "--fantasy--.WKFAllMyDemos";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -985,13 +1017,15 @@
 			baseConfigurationReference = E22868DE80CE6ED253AE5F7F /* Pods-WKFAllMyDemos.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = ZZ9329T9X9;
+				DEVELOPMENT_TEAM = QYZA666689;
 				ENABLE_STRICT_OBJC_MSGSEND = NO;
 				GCC_PREFIX_HEADER = "$(SRCROOT)/WKFAllMyDemos/AllMyDemos-PrefixHeader.pch";
 				INFOPLIST_FILE = WKFAllMyDemos/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "--fantasy--.WKFAllMyDemos";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};

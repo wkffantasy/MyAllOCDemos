@@ -46,7 +46,6 @@
   
   _titleView = titleView;
   self.navigationItem.titleView = titleView;
-
   
 }
 - (void)clickRight{

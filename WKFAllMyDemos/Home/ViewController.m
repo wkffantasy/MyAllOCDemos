@@ -18,12 +18,14 @@
 #import "MoveAnimateController.h"
 #import "EditCellController.h"
 #import "SubclassController.h"
+#import "IdentifyingCodeController.h"
 
 #import "RunTimeController.h"
 #import "WebViewController.h"
 #import "BaiduMapController.h"
 #import "AlbumController.h"
 #import "VideoRecordController.h"
+
 
 //view
 #import "HomeCell.h"
@@ -201,6 +203,11 @@
   [self.navigationController pushViewController:[MoveAnimateController new] animated:YES];
   
 }
+- (void)jumpToIdentifyCodeController{
+    
+    [self.navigationController pushViewController:[IdentifyingCodeController new] animated:YES];
+    
+}
 
 #pragma oc-class
 
@@ -325,6 +332,12 @@
                             @"status":@"在写",
                             @"jumeTo":NSStringFromSelector(@selector(jumpToWaveAnimationController)),
                             },
+                          @{
+                              @"title":@"图形验证码的生成",
+                              @"titleDescription":@"简单的写",
+                              @"status":@"在写",
+                              @"jumeTo":NSStringFromSelector(@selector(jumpToIdentifyCodeController)),
+                              },
                           
                           
                           ];

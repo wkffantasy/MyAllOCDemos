@@ -62,12 +62,12 @@
   [self.view addSubview:tableView];
   
   [_tableView mas_makeConstraints:^(MASConstraintMaker *make) {
-    make.left.and.right.and.bottom.and.top.mas_equalTo(0);
+      make.left.and.right.and.bottom.mas_equalTo(0);
+      make.top.mas_equalTo(64);
     
   }];
   
   [self.titleView updateText:@"上下滑动右侧的字母表有惊喜哦" andTitleFont:nil andTitleColor:nil];
-  
   
   
 }
@@ -167,7 +167,9 @@
   return _dataArray;
   
 }
-
+- (void)dealloc {
+    NSLog(@"Alphabet Controller dealloc");
+}
 
 
 @end

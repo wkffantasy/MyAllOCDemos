@@ -75,7 +75,21 @@
     make.height.mas_equalTo(110);
     
   }];
+    
+    UIButton * backButton = [UIButton buttonWithType:UIButtonTypeCustom];
+    [backButton setTitle:@"back" forState:UIControlStateNormal];
+    [backButton setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
+    [backButton addTarget:self action:@selector(clickBack) forControlEvents:UIControlEventTouchUpInside];
+    [topView addSubview:backButton];
+    [backButton mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.centerX.mas_equalTo(topView.mas_centerX);
+        make.centerY.mas_equalTo(topView.mas_centerY);
+        make.width.and.height.mas_equalTo(40);
+    }];
   
+}
+- (void)clickBack {
+    [self.navigationController popViewControllerAnimated:YES];
 }
 - (void)setupCurveView {
   
