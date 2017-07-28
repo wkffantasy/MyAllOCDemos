@@ -14,6 +14,7 @@
 
 //lib
 #import "Masonry.h"
+#import "UINavigationController+FDFullscreenPopGesture.h"
 
 #define maxMoveHeight  60
 
@@ -31,20 +32,22 @@
   
   [super viewWillAppear:animated];
   
-  [self.navigationController setNavigationBarHidden:YES];
+  
   
 }
 - (void)viewWillDisappear:(BOOL)animated {
   
   [super viewWillDisappear:animated];
-  [self.navigationController setNavigationBarHidden:NO];
+  
   
   
 }
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-  self.view.backgroundColor = [UIColor whiteColor];
+    
+    self.fd_prefersNavigationBarHidden = YES;
+   self.view.backgroundColor = [UIColor whiteColor];
     // Do any additional setup after loading the view.
   
   [self setupTopView];

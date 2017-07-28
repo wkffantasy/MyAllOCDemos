@@ -69,6 +69,7 @@
 - (void)viewDidLoad {
   
   [super viewDidLoad];
+    self.view.backgroundColor = [UIColor whiteColor];
   NSArray * selectTitlesArray = @[
                                   @"OC-demos",
                                   @"OC-class",
