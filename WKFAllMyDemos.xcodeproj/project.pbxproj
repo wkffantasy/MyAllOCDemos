@@ -17,7 +17,6 @@
 		4B0286581D805A93003E9195 /* HaveMarginScrollController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4B0286571D805A93003E9195 /* HaveMarginScrollController.m */; };
 		4B068B3C1F1C9B5D0035B457 /* BaiduMapController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4B068B3B1F1C9B5D0035B457 /* BaiduMapController.m */; };
 		4B102BF51F2B144400818D3B /* BaseNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4B102BF41F2B144400818D3B /* BaseNavigationController.m */; };
-		4B102BF91F2B152F00818D3B /* UINavigationController+FDFullscreenPopGesture.m in Sources */ = {isa = PBXBuildFile; fileRef = 4B102BF81F2B152F00818D3B /* UINavigationController+FDFullscreenPopGesture.m */; };
 		4B47EE461F20469A00D1E7D4 /* changeCamer.png in Resources */ = {isa = PBXBuildFile; fileRef = 4B47EE401F20469A00D1E7D4 /* changeCamer.png */; };
 		4B47EE471F20469A00D1E7D4 /* flashOff.png in Resources */ = {isa = PBXBuildFile; fileRef = 4B47EE411F20469A00D1E7D4 /* flashOff.png */; };
 		4B47EE481F20469A00D1E7D4 /* flashOn.png in Resources */ = {isa = PBXBuildFile; fileRef = 4B47EE421F20469A00D1E7D4 /* flashOn.png */; };
@@ -110,8 +109,6 @@
 		4B068B3B1F1C9B5D0035B457 /* BaiduMapController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BaiduMapController.m; sourceTree = "<group>"; };
 		4B102BF31F2B144400818D3B /* BaseNavigationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaseNavigationController.h; sourceTree = "<group>"; };
 		4B102BF41F2B144400818D3B /* BaseNavigationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BaseNavigationController.m; sourceTree = "<group>"; };
-		4B102BF71F2B152F00818D3B /* UINavigationController+FDFullscreenPopGesture.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UINavigationController+FDFullscreenPopGesture.h"; sourceTree = "<group>"; };
-		4B102BF81F2B152F00818D3B /* UINavigationController+FDFullscreenPopGesture.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UINavigationController+FDFullscreenPopGesture.m"; sourceTree = "<group>"; };
 		4B47EE401F20469A00D1E7D4 /* changeCamer.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = changeCamer.png; sourceTree = "<group>"; };
 		4B47EE411F20469A00D1E7D4 /* flashOff.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = flashOff.png; sourceTree = "<group>"; };
 		4B47EE421F20469A00D1E7D4 /* flashOn.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = flashOn.png; sourceTree = "<group>"; };
@@ -293,18 +290,8 @@
 		4B102BF21F2B134000818D3B /* Libs */ = {
 			isa = PBXGroup;
 			children = (
-				4B102BF61F2B152F00818D3B /* FDFullscreenPopGesture */,
 			);
 			path = Libs;
-			sourceTree = "<group>";
-		};
-		4B102BF61F2B152F00818D3B /* FDFullscreenPopGesture */ = {
-			isa = PBXGroup;
-			children = (
-				4B102BF71F2B152F00818D3B /* UINavigationController+FDFullscreenPopGesture.h */,
-				4B102BF81F2B152F00818D3B /* UINavigationController+FDFullscreenPopGesture.m */,
-			);
-			path = FDFullscreenPopGesture;
 			sourceTree = "<group>";
 		};
 		4B6E504E1F149A2A00272552 /* WebViewTest */ = {
@@ -861,7 +848,6 @@
 				9AB7AEBF1D7FA8F2002E22BF /* WKFCircularSlidingView.m in Sources */,
 				9A03DCF21F00D75E00A31263 /* UIImage+UIImage_extention.m in Sources */,
 				4B0286551D805A7B003E9195 /* RollingItemView.m in Sources */,
-				4B102BF91F2B152F00818D3B /* UINavigationController+FDFullscreenPopGesture.m in Sources */,
 				9A7EB45D1E5459B90084AC49 /* WaveAnimationController.m in Sources */,
 				9AB0D6821D7E5D48007E7CBD /* AlphabetController.m in Sources */,
 				9AB063921D7D404400AAEED5 /* AppDelegate.m in Sources */,
