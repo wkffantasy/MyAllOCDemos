@@ -25,6 +25,7 @@
 		4B0DC82C1F30A2570095C282 /* ic-select-green.png in Resources */ = {isa = PBXBuildFile; fileRef = 4B0DC8291F30A2570095C282 /* ic-select-green.png */; };
 		4B0DC82D1F30A2570095C282 /* ic-select-green@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 4B0DC82A1F30A2570095C282 /* ic-select-green@2x.png */; };
 		4B0DC82E1F30A2570095C282 /* ic-select-green@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 4B0DC82B1F30A2570095C282 /* ic-select-green@3x.png */; };
+		4B0DC8311F30BA400095C282 /* DemoCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 4B0DC8301F30BA400095C282 /* DemoCell.m */; };
 		4B102BF51F2B144400818D3B /* BaseNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4B102BF41F2B144400818D3B /* BaseNavigationController.m */; };
 		4B47EE461F20469A00D1E7D4 /* changeCamer.png in Resources */ = {isa = PBXBuildFile; fileRef = 4B47EE401F20469A00D1E7D4 /* changeCamer.png */; };
 		4B47EE471F20469A00D1E7D4 /* flashOff.png in Resources */ = {isa = PBXBuildFile; fileRef = 4B47EE411F20469A00D1E7D4 /* flashOff.png */; };
@@ -131,6 +132,8 @@
 		4B0DC8291F30A2570095C282 /* ic-select-green.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "ic-select-green.png"; sourceTree = "<group>"; };
 		4B0DC82A1F30A2570095C282 /* ic-select-green@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "ic-select-green@2x.png"; sourceTree = "<group>"; };
 		4B0DC82B1F30A2570095C282 /* ic-select-green@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "ic-select-green@3x.png"; sourceTree = "<group>"; };
+		4B0DC82F1F30BA400095C282 /* DemoCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DemoCell.h; sourceTree = "<group>"; };
+		4B0DC8301F30BA400095C282 /* DemoCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DemoCell.m; sourceTree = "<group>"; };
 		4B102BF31F2B144400818D3B /* BaseNavigationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaseNavigationController.h; sourceTree = "<group>"; };
 		4B102BF41F2B144400818D3B /* BaseNavigationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BaseNavigationController.m; sourceTree = "<group>"; };
 		4B47EE401F20469A00D1E7D4 /* changeCamer.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = changeCamer.png; sourceTree = "<group>"; };
@@ -329,6 +332,8 @@
 				4B0DC8201F3071200095C282 /* KFAsset.m */,
 				4B0DC8221F3076EA0095C282 /* KFSelectImageCell.h */,
 				4B0DC8231F3076EA0095C282 /* KFSelectImageCell.m */,
+				4B0DC82F1F30BA400095C282 /* DemoCell.h */,
+				4B0DC8301F30BA400095C282 /* DemoCell.m */,
 			);
 			path = ImagesPickerController;
 			sourceTree = "<group>";
@@ -878,6 +883,7 @@
 				4B0DC8121F304E370095C282 /* ImagePickerEntranceController.m in Sources */,
 				9AB063CC1D7D490900AAEED5 /* HomeCell.m in Sources */,
 				4B0DC8211F3071200095C282 /* KFAsset.m in Sources */,
+				4B0DC8311F30BA400095C282 /* DemoCell.m in Sources */,
 				4B102BF51F2B144400818D3B /* BaseNavigationController.m in Sources */,
 				9AB0D6771D7E5D07007E7CBD /* MyLabel.m in Sources */,
 				9A27BADE1EA70A5C00690EEB /* RadarView.m in Sources */,
