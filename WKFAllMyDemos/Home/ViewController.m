@@ -19,6 +19,7 @@
 #import "EditCellController.h"
 #import "SubclassController.h"
 #import "IdentifyingCodeController.h"
+#import "ImagePickerEntranceController.h"
 
 #import "RunTimeController.h"
 #import "WebViewController.h"
@@ -162,8 +163,8 @@
 }
 
 
-#pragma oc-demos
 //跳转的所有的controller
+#pragma oc-demos
 
 - (void)jumpToWaveAnimationController {
   
@@ -209,6 +210,10 @@
     [self.navigationController pushViewController:[IdentifyingCodeController new] animated:YES];
     
 }
+- (void)jumpToImagePickerEntranceController {
+    [self.navigationController pushViewController:[ImagePickerEntranceController new] animated:YES];
+}
+
 
 #pragma oc-class
 
@@ -339,7 +344,12 @@
                               @"status":@"在写",
                               @"jumeTo":NSStringFromSelector(@selector(jumpToIdentifyCodeController)),
                               },
-                          
+                          @{
+                              @"title":@"ImagePickerContrller",
+                              @"titleDescription":@"选择照片",
+                              @"status":@"在写",
+                              @"jumeTo":NSStringFromSelector(@selector(jumpToImagePickerEntranceController)),
+                              }
                           
                           ];
   
@@ -372,13 +382,4 @@
   return _dataArray;
   
 }
-/*
- 押一付三
-  1700*4 - 600 = 
- 6800
- 6200
- */
-
-
-
 @end

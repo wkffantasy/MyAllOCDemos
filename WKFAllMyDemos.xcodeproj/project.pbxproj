@@ -16,6 +16,9 @@
 		4B0286551D805A7B003E9195 /* RollingItemView.m in Sources */ = {isa = PBXBuildFile; fileRef = 4B0286531D805A7B003E9195 /* RollingItemView.m */; };
 		4B0286581D805A93003E9195 /* HaveMarginScrollController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4B0286571D805A93003E9195 /* HaveMarginScrollController.m */; };
 		4B068B3C1F1C9B5D0035B457 /* BaiduMapController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4B068B3B1F1C9B5D0035B457 /* BaiduMapController.m */; };
+		4B0DC8121F304E370095C282 /* ImagePickerEntranceController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4B0DC8111F304E370095C282 /* ImagePickerEntranceController.m */; };
+		4B0DC8181F3057370095C282 /* KFAlbumPickerController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4B0DC8171F3057370095C282 /* KFAlbumPickerController.m */; };
+		4B0DC81B1F3057570095C282 /* KFNaviController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4B0DC81A1F3057570095C282 /* KFNaviController.m */; };
 		4B102BF51F2B144400818D3B /* BaseNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4B102BF41F2B144400818D3B /* BaseNavigationController.m */; };
 		4B47EE461F20469A00D1E7D4 /* changeCamer.png in Resources */ = {isa = PBXBuildFile; fileRef = 4B47EE401F20469A00D1E7D4 /* changeCamer.png */; };
 		4B47EE471F20469A00D1E7D4 /* flashOff.png in Resources */ = {isa = PBXBuildFile; fileRef = 4B47EE411F20469A00D1E7D4 /* flashOff.png */; };
@@ -107,6 +110,12 @@
 		4B0286571D805A93003E9195 /* HaveMarginScrollController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HaveMarginScrollController.m; sourceTree = "<group>"; };
 		4B068B3A1F1C9B5D0035B457 /* BaiduMapController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaiduMapController.h; sourceTree = "<group>"; };
 		4B068B3B1F1C9B5D0035B457 /* BaiduMapController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BaiduMapController.m; sourceTree = "<group>"; };
+		4B0DC8101F304E370095C282 /* ImagePickerEntranceController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ImagePickerEntranceController.h; sourceTree = "<group>"; };
+		4B0DC8111F304E370095C282 /* ImagePickerEntranceController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ImagePickerEntranceController.m; sourceTree = "<group>"; };
+		4B0DC8161F3057370095C282 /* KFAlbumPickerController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KFAlbumPickerController.h; sourceTree = "<group>"; };
+		4B0DC8171F3057370095C282 /* KFAlbumPickerController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KFAlbumPickerController.m; sourceTree = "<group>"; };
+		4B0DC8191F3057570095C282 /* KFNaviController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KFNaviController.h; sourceTree = "<group>"; };
+		4B0DC81A1F3057570095C282 /* KFNaviController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KFNaviController.m; sourceTree = "<group>"; };
 		4B102BF31F2B144400818D3B /* BaseNavigationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaseNavigationController.h; sourceTree = "<group>"; };
 		4B102BF41F2B144400818D3B /* BaseNavigationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BaseNavigationController.m; sourceTree = "<group>"; };
 		4B47EE401F20469A00D1E7D4 /* changeCamer.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = changeCamer.png; sourceTree = "<group>"; };
@@ -287,6 +296,19 @@
 			path = BaiduMapController;
 			sourceTree = "<group>";
 		};
+		4B0DC80F1F304D9B0095C282 /* ImagesPickerController */ = {
+			isa = PBXGroup;
+			children = (
+				4B0DC8101F304E370095C282 /* ImagePickerEntranceController.h */,
+				4B0DC8111F304E370095C282 /* ImagePickerEntranceController.m */,
+				4B0DC8161F3057370095C282 /* KFAlbumPickerController.h */,
+				4B0DC8171F3057370095C282 /* KFAlbumPickerController.m */,
+				4B0DC8191F3057570095C282 /* KFNaviController.h */,
+				4B0DC81A1F3057570095C282 /* KFNaviController.m */,
+			);
+			path = ImagesPickerController;
+			sourceTree = "<group>";
+		};
 		4B102BF21F2B134000818D3B /* Libs */ = {
 			isa = PBXGroup;
 			children = (
@@ -451,6 +473,7 @@
 		9AB0638C1D7D404400AAEED5 /* WKFAllMyDemos */ = {
 			isa = PBXGroup;
 			children = (
+				4B0DC80F1F304D9B0095C282 /* ImagesPickerController */,
 				4B6F85281F2AD0E800E176E0 /* IdentifyingCode */,
 				4BE19B061F1EFECE00F14A15 /* VideoRecord */,
 				4BE19B021F1EFCB000F14A15 /* Album */,
@@ -825,10 +848,12 @@
 				9AAE83AB1EF23C1900396119 /* EditCellController.m in Sources */,
 				4B02864D1D8056BE003E9195 /* TimeTool.m in Sources */,
 				4B0286541D805A7B003E9195 /* RollingCircleView.m in Sources */,
+				4B0DC8121F304E370095C282 /* ImagePickerEntranceController.m in Sources */,
 				9AB063CC1D7D490900AAEED5 /* HomeCell.m in Sources */,
 				4B102BF51F2B144400818D3B /* BaseNavigationController.m in Sources */,
 				9AB0D6771D7E5D07007E7CBD /* MyLabel.m in Sources */,
 				9A27BADE1EA70A5C00690EEB /* RadarView.m in Sources */,
+				4B0DC8181F3057370095C282 /* KFAlbumPickerController.m in Sources */,
 				9AB0D67D1D7E5D14007E7CBD /* MyCarGroupModel.m in Sources */,
 				9AC55D7F1E669BB600510131 /* CurveView.m in Sources */,
 				4B47EE4E1F2049BD00D1E7D4 /* PlayRecordVideoController.m in Sources */,
@@ -840,6 +865,7 @@
 				4B0286471D805466003E9195 /* VideoPlayController.m in Sources */,
 				9AB0D6751D7E5D07007E7CBD /* MyCarCell.m in Sources */,
 				9AB063E01D7D788F00AAEED5 /* ImageSizeTool.m in Sources */,
+				4B0DC81B1F3057570095C282 /* KFNaviController.m in Sources */,
 				9A7EB4601E545E470084AC49 /* WaveView.m in Sources */,
 				9A7EB4561E543B960084AC49 /* SubclassController.m in Sources */,
 				9AB063C91D7D447F00AAEED5 /* HomeModel.m in Sources */,
