@@ -21,11 +21,20 @@
 
 @interface KFAlbumDetailController ()<UICollectionViewDelegate,UICollectionViewDataSource,UICollectionViewDelegateFlowLayout>
 
-@property (nonatomic,strong) NSMutableArray * selectImagesArray;
 @property (nonatomic,strong) NSMutableArray * dataArray;
+
 @property (nonatomic,assign) int currentSelectImageCount;
 
 @property (nonatomic,weak) UICollectionView * collectionView;
+
+/*
+ * when maxImageCount == 1,this property works
+ */
+@property (nonatomic,weak) KFAsset * selectAsset;
+/*
+ * when maxImageCount != 1,this property works,
+ */
+@property (nonatomic,strong) NSMutableArray * selectAssets;
 
 @end
 
@@ -36,7 +45,7 @@
     [super viewDidLoad];
     
     self.view.backgroundColor = [UIColor whiteColor];
-    
+    NSAssert(self.maxImageCount > 0, @"");
     [self settingNaviBar];
     [self setupCollectionView];
     
@@ -105,9 +114,46 @@
     return 0;
 }
 - (void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath {
+    
     KFAsset * a = self.dataArray[indexPath.row];
-    a.selected = !a.selected;
-    [self.collectionView reloadItemsAtIndexPaths:@[indexPath]];
+    if (self.maxImageCount == 1) {
+        if (self.selectAsset == a) {
+            a.selected = !a.selected;
+            [self.collectionView reloadItemsAtIndexPaths:@[indexPath]];
+        } else {
+            self.selectAsset.selected = NO;
+            a.selected = YES;
+            self.selectAsset = a;
+            [self.collectionView reloadData];
+        }
+        
+    } else {
+        
+        if (a.selected) {
+            a.selected = NO;
+            _currentSelectImageCount --;
+            NSAssert([self.selectAssets containsObject:a], @"");
+            [self.selectAssets removeObject:a];
+        } else {
+            if (_currentSelectImageCount < _maxImageCount) {
+                a.selected = YES;
+                _currentSelectImageCount++;
+                [self.selectAssets addObject:a];
+            } else {
+                UIAlertController * alertController = [UIAlertController alertControllerWithTitle:[NSString stringWithFormat:@"最大数量是 %d",_maxImageCount] message:[NSString stringWithFormat:@"您已选择 %d张",_maxImageCount] preferredStyle:UIAlertControllerStyleAlert];
+                @weakify(alertController);
+                [alertController addAction:[UIAlertAction actionWithTitle:@"确定" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
+                    @strongify(alertController);
+                    [alertController dismissViewControllerAnimated:YES completion:nil];
+                }]];
+                [self presentViewController:alertController animated:YES completion:nil];
+                return;
+                
+            }
+        }
+        [self.collectionView reloadItemsAtIndexPaths:@[indexPath]];
+        
+    }
 }
 #pragma mark UI
 
@@ -136,11 +182,24 @@
 
 - (void)clickDone {
     
+    NSMutableArray * backArray = [NSMutableArray array];
+    if (self.maxImageCount == 1) {
+        if (self.selectAsset.selected == YES ) {
+            [backArray addObject:self.selectAsset.originImage];
+        }
+    } else {
+        for (KFAsset * a in self.selectAssets) {
+            [backArray addObject:a.originImage];
+        }
+    }
+    
+    // back call,and dissmiss this controller
     if (self.completeBlock) {
-        self.completeBlock(self.selectImagesArray);
+        self.completeBlock(backArray);
     }
     
 }
+
 
 - (NSMutableArray *)dataArray {
     if (_dataArray == nil) {
@@ -148,12 +207,13 @@
     }
     return _dataArray;
 }
-- (NSMutableArray *)selectImagesArray {
-    if (_selectImagesArray == nil) {
-        _selectImagesArray = [NSMutableArray array];
+- (NSMutableArray *)selectAssets {
+    if (_selectAssets == nil) {
+        _selectAssets = [NSMutableArray array];
     }
-    return _selectImagesArray;
+    return _selectAssets;
 }
+
 - (void)dealloc {
     NSLog(@"Album detail dealloc");
 }

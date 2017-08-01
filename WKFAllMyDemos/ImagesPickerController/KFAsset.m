@@ -10,6 +10,10 @@
 
 @implementation KFAsset
 
-
+- (UIImage *)originImage {
+    
+    return [UIImage imageWithCGImage:self.asset.defaultRepresentation.fullResolutionImage];
+    
+}
 
 @end

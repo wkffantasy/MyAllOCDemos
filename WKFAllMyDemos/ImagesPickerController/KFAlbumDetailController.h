@@ -16,5 +16,6 @@ typedef void(^DidClickCompleteButtonBlock)(NSArray * imageArray);
 
 @property (nonatomic,strong) ALAssetsGroup * assetsGroup;
 @property (nonatomic,copy) DidClickCompleteButtonBlock completeBlock;
+@property (nonatomic,assign) int maxImageCount;
 
 @end

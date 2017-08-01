@@ -43,6 +43,12 @@
     albumVC.completeBlock = ^(NSArray * imagesArray){
         [self dismissViewControllerAnimated:YES completion:nil];
         NSLog(@"did complete imagesArray == %@",imagesArray);
+        NSLog(@"and its count == %lu",(unsigned long)imagesArray.count);
+        for (UIImage * image in imagesArray) {
+//            NSData * imageData = UIImageJPEGRepresentation(image, 1);
+            NSData * imageData = UIImagePNGRepresentation(image);
+            NSLog(@"imageData == %fKB",imageData.length / 1024.0);
+        }
     };
     UINavigationController * naviVC = [[UINavigationController alloc]initWithRootViewController:albumVC];
     
@@ -59,19 +65,16 @@
     [alertController addAction:[UIAlertAction actionWithTitle:@"一张" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
         @strongify(alertController);
         [alertController dismissViewControllerAnimated:YES completion:nil];
-        
-        albumVC.maxImageCount = 1;
+    
         [self presentViewController:naviVC animated:YES completion:nil];
         
-        NSLog(@"one image");
     }]];
     [alertController addAction:[UIAlertAction actionWithTitle:@"多张" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
         @strongify(alertController);
         [alertController dismissViewControllerAnimated:YES completion:nil];
-        albumVC.maxImageCount = 9;
+        albumVC.maxImageCount = 3;
         [self presentViewController:naviVC animated:YES completion:nil];
         
-        NSLog(@"some images");
     }]];
     
     [self presentViewController:alertController animated:YES completion:nil];

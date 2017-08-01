@@ -28,12 +28,12 @@
 + (UIImage *)imageWithName:(NSString *)name {
     // 此时会调用imageNamed的系统实现部分，因为实现部分已经做了交换。
     
-    NSLog(@"imageWithName name == %@",name);
+//    NSLog(@"imageWithName name == %@",name);
     UIImage * image = [self imageWithName:name];
     if (image) {
-        NSLog(@"图片加载成功");
+//        NSLog(@"图片加载成功");
     } else {
-        NSLog(@"图片加载失败");
+//        NSLog(@"图片加载失败");
     }
     return image;
     

@@ -15,4 +15,6 @@
 @property (nonatomic,strong) ALAsset * asset;
 @property (nonatomic,assign) BOOL selected;
 
+@property (nonatomic,strong) UIImage * originImage;
+
 @end

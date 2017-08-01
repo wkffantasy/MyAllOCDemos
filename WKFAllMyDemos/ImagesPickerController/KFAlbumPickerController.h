@@ -9,7 +9,7 @@
 #import <UIKit/UIKit.h>
 
 typedef void(^DidClickCancelButtonBlock)();
-typedef void(^DidClickCompleteButtonBlock)(NSArray * imageArray);
+typedef void(^DidClickCompleteButtonBlock)(NSArray  * imageArray);
 
 @interface KFAlbumPickerController : UIViewController
 

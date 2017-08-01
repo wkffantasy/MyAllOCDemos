@@ -110,6 +110,7 @@
     
     KFAlbumDetailController * albumDetailVc = [[KFAlbumDetailController alloc]init];
     albumDetailVc.assetsGroup = self.dataArray[indexPath.row];
+    albumDetailVc.maxImageCount = self.maxImageCount == 0 ? 1 :self.maxImageCount;
     @weakify(self);
     albumDetailVc.completeBlock = ^(NSArray * imagesArray){
         @strongify(self);
