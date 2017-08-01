@@ -10,6 +10,9 @@
 
 #import <AssetsLibrary/AssetsLibrary.h>
 
+//controller
+#import "KFAlbumDetailController.h"
+
 @interface KFAlbumPickerController ()<UITableViewDelegate,UITableViewDataSource>
 
 @property (nonatomic, weak) UITableView * tableView;
@@ -58,7 +61,7 @@
     });
     
 }
-
+#pragma UI
 - (void)setupViews {
     
     UITableView * tableView = [[UITableView alloc]initWithFrame:self.view.bounds style:UITableViewStylePlain];
@@ -68,6 +71,14 @@
     tableView.rowHeight = 57;
     
     [self.view addSubview:tableView];
+}
+- (void)settingNaviBar {
+    
+    self.title = @"Select Album";
+    
+    UIBarButtonItem * left = [[UIBarButtonItem alloc]initWithTitle:@"cancel" style:UIBarButtonItemStyleDone target:self action:@selector(clickCancel)];
+    
+    self.navigationItem.leftBarButtonItem = left;
 }
 #pragma UITableViewDelegate,UITableViewDataSource
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
@@ -95,14 +106,23 @@
 
 }
 
-- (void)settingNaviBar {
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     
-    self.title = @"Select Album";
+    KFAlbumDetailController * albumDetailVc = [[KFAlbumDetailController alloc]init];
+    albumDetailVc.assetsGroup = self.dataArray[indexPath.row];
+    @weakify(self);
+    albumDetailVc.completeBlock = ^(NSArray * imagesArray){
+        @strongify(self);
+        if (self.completeBlock) {
+            self.completeBlock(imagesArray);
+        }
+    };
+    [self.navigationController pushViewController:albumDetailVc animated:YES];
     
-    UIBarButtonItem * left = [[UIBarButtonItem alloc]initWithTitle:@"cancel" style:UIBarButtonItemStyleDone target:self action:@selector(clickCancel)];
-    
-    self.navigationItem.leftBarButtonItem = left;
 }
+
+#pragma others
+
 - (void)clickCancel {
     
     if (self.cancelBlock) {
