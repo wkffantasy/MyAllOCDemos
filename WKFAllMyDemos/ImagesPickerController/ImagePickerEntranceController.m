@@ -116,12 +116,12 @@
     
     UIBarButtonItem * rightItem = [[UIBarButtonItem alloc]initWithTitle:@"click" style:UIBarButtonItemStylePlain target:self action:@selector(clickSelectToChoice)];
     self.navigationItem.rightBarButtonItem = rightItem;
+    
 }
 - (void)clickSelectToChoice {
     
     KFAlbumPickerController * albumVC = [[KFAlbumPickerController alloc]init];
     albumVC.cancelBlock = ^(){
-        NSLog(@"did cancel");
         [self dismissViewControllerAnimated:YES completion:nil];
     };
     albumVC.completeBlock = ^(NSArray * imagesArray){
@@ -130,6 +130,18 @@
             [self.dataArray addObject:image];
         }
         [self.collectionView reloadData];
+    };
+    albumVC.failedBlock = ^(NSError *error){
+        UIAlertController * alertVC = [UIAlertController alertControllerWithTitle:error.localizedDescription message:@"请在 设置->OCdemos->照片 允许方法" preferredStyle:UIAlertControllerStyleAlert];
+        @weakify(alertVC);
+        [alertVC addAction:[UIAlertAction actionWithTitle:@"确定" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
+            @strongify(alertVC);
+            [alertVC dismissViewControllerAnimated:YES completion:nil];
+        }]];
+        [self dismissViewControllerAnimated:YES completion:^{
+            [self presentViewController:alertVC animated:YES completion:nil];
+        }];
+        NSLog(@"occure an error,error == %@",error.localizedDescription);
     };
     UINavigationController * naviVC = [[UINavigationController alloc]initWithRootViewController:albumVC];
     
@@ -140,17 +152,23 @@
         @strongify(alertController);
         [alertController dismissViewControllerAnimated:YES completion:nil];
         
-        NSLog(@"cacel");
+    }]];
+    [alertController addAction:[UIAlertAction actionWithTitle:@"从相机选择" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
+        @strongify(alertController);
+        albumVC.isFromCamera = YES;
+        [alertController dismissViewControllerAnimated:YES completion:nil];
+        
+        [self presentViewController:naviVC animated:YES completion:nil];
         
     }]];
-    [alertController addAction:[UIAlertAction actionWithTitle:@"一张" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
+    [alertController addAction:[UIAlertAction actionWithTitle:@"从相册选择一张" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
         @strongify(alertController);
         [alertController dismissViewControllerAnimated:YES completion:nil];
         
         [self presentViewController:naviVC animated:YES completion:nil];
         
     }]];
-    [alertController addAction:[UIAlertAction actionWithTitle:@"多张" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
+    [alertController addAction:[UIAlertAction actionWithTitle:@"从相册选择多张" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
         @strongify(alertController);
         [alertController dismissViewControllerAnimated:YES completion:nil];
         albumVC.maxImageCount = 3;

@@ -13,7 +13,7 @@
 //controller
 #import "KFAlbumDetailController.h"
 
-@interface KFAlbumPickerController ()<UITableViewDelegate,UITableViewDataSource>
+@interface KFAlbumPickerController ()<UITableViewDelegate,UITableViewDataSource,UIImagePickerControllerDelegate,UINavigationControllerDelegate>
 
 @property (nonatomic, weak) UITableView * tableView;
 @property (nonatomic,strong) NSMutableArray * dataArray;
@@ -29,9 +29,19 @@
     [super viewDidLoad];
     self.view.backgroundColor = [UIColor whiteColor];
     
-    [self settingNaviBar];
-    [self setupViews];
-    [self getDataFromLibrary];
+    if (self.isFromCamera == YES) {
+        
+        UIImagePickerController *imgPicker = [[UIImagePickerController alloc] init];
+        [imgPicker setAllowsEditing:YES];
+        [imgPicker setDelegate:self];
+        [imgPicker setSourceType:UIImagePickerControllerSourceTypeCamera];
+        [self presentViewController:imgPicker animated:YES completion:nil];
+        
+    } else {
+        [self settingNaviBar];
+        [self setupViews];
+        [self getDataFromLibrary];
+    }
     
     // Do any additional setup after loading the view.
 }
@@ -49,19 +59,33 @@
             }
         };
         void (^assetGroupEnumeratorFailure)(NSError *) = ^(NSError *error){
-            UIAlertController * alertVC = [UIAlertController alertControllerWithTitle:@"Error Occured" message:[NSString stringWithFormat:@"error == %@",error.localizedDescription] preferredStyle:UIAlertControllerStyleAlert];
-            @weakify(alertVC);
-            [alertVC addAction:[UIAlertAction actionWithTitle:@"" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
-                @strongify(alertVC);
-                [alertVC dismissViewControllerAnimated:YES completion:nil];
-            }]];
-            [self presentViewController:alertVC animated:YES completion:nil];
+            if (self.failedBlock) {
+                self.failedBlock(error);
+            }
         };
         [self.library enumerateGroupsWithTypes:ALAssetsGroupAll usingBlock:assetGroupEnumerator failureBlock:assetGroupEnumeratorFailure];
     });
     
 }
-#pragma UI
+
+#pragma mark - UIImagePickerControllerDelegate
+- (void)imagePickerController:(UIImagePickerController *)picker didFinishPickingMediaWithInfo:(NSDictionary<NSString *,id> *)info {
+    
+    [picker dismissViewControllerAnimated:YES completion:nil];
+    UIImage *image=[info objectForKey:UIImagePickerControllerEditedImage];
+    if (self.completeBlock) {
+        self.completeBlock(@[image]);
+    }
+    
+}
+- (void)imagePickerControllerDidCancel:(UIImagePickerController *)picker {
+    [picker dismissViewControllerAnimated:YES completion:nil];
+    if (self.cancelBlock) {
+        self.cancelBlock();
+    }
+}
+
+#pragma mark - UI
 - (void)setupViews {
     
     UITableView * tableView = [[UITableView alloc]initWithFrame:self.view.bounds style:UITableViewStylePlain];

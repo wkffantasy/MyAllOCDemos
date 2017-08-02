@@ -10,6 +10,7 @@
 
 typedef void(^DidClickCancelButtonBlock)();
 typedef void(^DidClickCompleteButtonBlock)(NSArray  * imageArray);
+typedef void(^FailureBlock)(NSError *error);
 
 @interface KFAlbumPickerController : UIViewController
 
@@ -17,5 +18,7 @@ typedef void(^DidClickCompleteButtonBlock)(NSArray  * imageArray);
 @property (nonatomic,assign) int maxImageCount;
 @property (nonatomic,copy) DidClickCancelButtonBlock cancelBlock;
 @property (nonatomic,copy) DidClickCompleteButtonBlock completeBlock;
+@property (nonatomic,copy) FailureBlock failedBlock;
+@property (nonatomic,assign) BOOL isFromCamera;
 
 @end
