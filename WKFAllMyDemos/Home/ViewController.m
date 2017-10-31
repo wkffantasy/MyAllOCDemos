@@ -21,6 +21,7 @@
 
 #import "RunTimeController.h"
 #import "WebViewController.h"
+#import "TestDemosController.h"
 
 
 //view
@@ -209,6 +210,9 @@
 - (void)jumpToWebViewController{
    [self.navigationController pushViewController:[WebViewController new] animated:YES];
 }
+- (void)jumpToTestDemosController{
+    [self.navigationController pushViewController:[TestDemosController new] animated:YES];
+}
 
 //dataSource
 
@@ -227,6 +231,12 @@
                              @"status":@"test",
                              @"jumeTo":NSStringFromSelector(@selector(jumpToWebViewController)),
                              },
+                          @{
+                              @"title":@"test demos",
+                              @"titleDescription":@"test demos and functions",
+                              @"status":@"test",
+                              @"jumeTo":NSStringFromSelector(@selector(jumpToTestDemosController)),
+                              },
 
         
                           ];

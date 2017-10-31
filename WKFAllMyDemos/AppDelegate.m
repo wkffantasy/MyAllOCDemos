@@ -17,6 +17,7 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     
+    [self creatFileDirectorys];
   // Override point for customization after application launch.
   return YES;
 }
@@ -123,6 +124,32 @@
             abort();
         }
     }
+}
+- (void)creatFileDirectorys{
+    
+    /*
+     拍照 单选图片 后图片的裁剪后文件夹
+     下载的所有的音频所在的文件夹
+     下载的所有视频所在的文件夹
+     下载的其他文件所在的文件夹
+     */
+    
+    NSArray * fileNames = @[@"Crops",@"Audios",@"Videos",@"OtherFiles"];
+    NSFileManager * fm = [NSFileManager defaultManager];
+    NSString *pathDocuments = [NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES) objectAtIndex:0];
+    for (NSString * fileName in fileNames) {
+        NSString *cropFilePath = [NSString stringWithFormat:@"%@/%@", pathDocuments,fileName];
+        if (![fm fileExistsAtPath:cropFilePath]) {
+            NSError * error;
+            [fm createDirectoryAtPath:cropFilePath withIntermediateDirectories:YES attributes:nil error:&error];
+            NSLog(@"cropFilePath ==%@",cropFilePath);
+            if (error) {
+                NSLog(@"fileName error == %@",error.localizedDescription);
+            }
+        }
+        
+    }
+    
 }
 
 @end
