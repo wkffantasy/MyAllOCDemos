@@ -24,6 +24,9 @@
 		9A27BADE1EA70A5C00690EEB /* RadarView.m in Sources */ = {isa = PBXBuildFile; fileRef = 9A27BAD91EA70A5C00690EEB /* RadarView.m */; };
 		9A27BADF1EA70A5C00690EEB /* RCTRadarManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 9A27BADB1EA70A5C00690EEB /* RCTRadarManager.m */; };
 		9A6251631F91F07C0088E82D /* TestDemosController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9A6251621F91F07C0088E82D /* TestDemosController.m */; };
+		9A65F97D2495D0A100F3F16B /* InstrumentsController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9A65F97C2495D0A100F3F16B /* InstrumentsController.m */; };
+		9A65F9802495D16B00F3F16B /* TestRetainCircleView.m in Sources */ = {isa = PBXBuildFile; fileRef = 9A65F97F2495D16B00F3F16B /* TestRetainCircleView.m */; };
+		9A65F9832495F53B00F3F16B /* UserAccountManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 9A65F9822495F53B00F3F16B /* UserAccountManager.m */; };
 		9A7EB4501E5437AE0084AC49 /* HeaderSelectView.m in Sources */ = {isa = PBXBuildFile; fileRef = 9A7EB44F1E5437AE0084AC49 /* HeaderSelectView.m */; };
 		9A7EB4561E543B960084AC49 /* SubclassController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9A7EB4551E543B960084AC49 /* SubclassController.m */; };
 		9A7EB45D1E5459B90084AC49 /* WaveAnimationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9A7EB45C1E5459B90084AC49 /* WaveAnimationController.m */; };
@@ -112,6 +115,12 @@
 		9A27BADB1EA70A5C00690EEB /* RCTRadarManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RCTRadarManager.m; sourceTree = "<group>"; };
 		9A6251611F91F07C0088E82D /* TestDemosController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TestDemosController.h; sourceTree = "<group>"; };
 		9A6251621F91F07C0088E82D /* TestDemosController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TestDemosController.m; sourceTree = "<group>"; };
+		9A65F97B2495D0A100F3F16B /* InstrumentsController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = InstrumentsController.h; sourceTree = "<group>"; };
+		9A65F97C2495D0A100F3F16B /* InstrumentsController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = InstrumentsController.m; sourceTree = "<group>"; };
+		9A65F97E2495D16B00F3F16B /* TestRetainCircleView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TestRetainCircleView.h; sourceTree = "<group>"; };
+		9A65F97F2495D16B00F3F16B /* TestRetainCircleView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TestRetainCircleView.m; sourceTree = "<group>"; };
+		9A65F9812495F53B00F3F16B /* UserAccountManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = UserAccountManager.h; sourceTree = "<group>"; };
+		9A65F9822495F53B00F3F16B /* UserAccountManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = UserAccountManager.m; sourceTree = "<group>"; };
 		9A7EB44E1E5437AE0084AC49 /* HeaderSelectView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HeaderSelectView.h; sourceTree = "<group>"; };
 		9A7EB44F1E5437AE0084AC49 /* HeaderSelectView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HeaderSelectView.m; sourceTree = "<group>"; };
 		9A7EB4541E543B960084AC49 /* SubclassController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SubclassController.h; sourceTree = "<group>"; };
@@ -304,6 +313,19 @@
 			path = TestDemos/TestDemos;
 			sourceTree = "<group>";
 		};
+		9A65F97A2495D07400F3F16B /* InstrumentsController */ = {
+			isa = PBXGroup;
+			children = (
+				9A65F97B2495D0A100F3F16B /* InstrumentsController.h */,
+				9A65F97C2495D0A100F3F16B /* InstrumentsController.m */,
+				9A65F97E2495D16B00F3F16B /* TestRetainCircleView.h */,
+				9A65F97F2495D16B00F3F16B /* TestRetainCircleView.m */,
+				9A65F9812495F53B00F3F16B /* UserAccountManager.h */,
+				9A65F9822495F53B00F3F16B /* UserAccountManager.m */,
+			);
+			path = InstrumentsController;
+			sourceTree = "<group>";
+		};
 		9A7EB44C1E5437600084AC49 /* Common */ = {
 			isa = PBXGroup;
 			children = (
@@ -370,6 +392,7 @@
 		9AB0638C1D7D404400AAEED5 /* WKFAllMyDemos */ = {
 			isa = PBXGroup;
 			children = (
+				9A65F97A2495D07400F3F16B /* InstrumentsController */,
 				9A6251601F91F0570088E82D /* TestDemos */,
 				4B6E504E1F149A2A00272552 /* WebViewTest */,
 				9A03DCEC1F00D37900A31263 /* RunTime */,
@@ -560,8 +583,6 @@
 				9AB063861D7D404400AAEED5 /* Sources */,
 				9AB063871D7D404400AAEED5 /* Frameworks */,
 				9AB063881D7D404400AAEED5 /* Resources */,
-				2D24F68AC0CC48EE4135DFE7 /* [CP] Embed Pods Frameworks */,
-				4AC430B71F4BD5F7469C5AB9 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -619,7 +640,7 @@
 				TargetAttributes = {
 					9AB063891D7D404400AAEED5 = {
 						CreatedOnToolsVersion = 7.3;
-						DevelopmentTeam = ZZ9329T9X9;
+						DevelopmentTeam = 78ZB3QE954;
 					};
 					9AB063A51D7D404500AAEED5 = {
 						CreatedOnToolsVersion = 7.3;
@@ -636,6 +657,7 @@
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
 			knownRegions = (
+				English,
 				en,
 				Base,
 			);
@@ -680,36 +702,6 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		2D24F68AC0CC48EE4135DFE7 /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-WKFAllMyDemos/Pods-WKFAllMyDemos-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		4AC430B71F4BD5F7469C5AB9 /* [CP] Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Copy Pods Resources";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-WKFAllMyDemos/Pods-WKFAllMyDemos-resources.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
 		9D8B58614C8C7966817EE7A3 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -737,7 +729,9 @@
 			files = (
 				9A27BADD1EA70A5C00690EEB /* MCRadarLayer.m in Sources */,
 				9AB063D11D7D706800AAEED5 /* MarqueeController.m in Sources */,
+				9A65F97D2495D0A100F3F16B /* InstrumentsController.m in Sources */,
 				9A27BADF1EA70A5C00690EEB /* RCTRadarManager.m in Sources */,
+				9A65F9832495F53B00F3F16B /* UserAccountManager.m in Sources */,
 				9AAE83AB1EF23C1900396119 /* EditCellController.m in Sources */,
 				4B02864D1D8056BE003E9195 /* TimeTool.m in Sources */,
 				4B0286541D805A7B003E9195 /* RollingCircleView.m in Sources */,
@@ -763,6 +757,7 @@
 				9A03DCF21F00D75E00A31263 /* UIImage+UIImage_extention.m in Sources */,
 				4B0286551D805A7B003E9195 /* RollingItemView.m in Sources */,
 				9A7EB45D1E5459B90084AC49 /* WaveAnimationController.m in Sources */,
+				9A65F9802495D16B00F3F16B /* TestRetainCircleView.m in Sources */,
 				9AB0D6821D7E5D48007E7CBD /* AlphabetController.m in Sources */,
 				9AB063921D7D404400AAEED5 /* AppDelegate.m in Sources */,
 				9AB063D41D7D709F00AAEED5 /* NavigationTitleView.m in Sources */,
@@ -922,7 +917,7 @@
 			baseConfigurationReference = F109307EE4BC6E7B699B7216 /* Pods-WKFAllMyDemos.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = ZZ9329T9X9;
+				DEVELOPMENT_TEAM = 78ZB3QE954;
 				ENABLE_STRICT_OBJC_MSGSEND = NO;
 				GCC_PREFIX_HEADER = "$(SRCROOT)/WKFAllMyDemos/AllMyDemos-PrefixHeader.pch";
 				INFOPLIST_FILE = WKFAllMyDemos/Info.plist;
@@ -937,7 +932,7 @@
 			baseConfigurationReference = BD53EFF1D23F7A588F5A9DA8 /* Pods-WKFAllMyDemos.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = ZZ9329T9X9;
+				DEVELOPMENT_TEAM = 78ZB3QE954;
 				ENABLE_STRICT_OBJC_MSGSEND = NO;
 				GCC_PREFIX_HEADER = "$(SRCROOT)/WKFAllMyDemos/AllMyDemos-PrefixHeader.pch";
 				INFOPLIST_FILE = WKFAllMyDemos/Info.plist;

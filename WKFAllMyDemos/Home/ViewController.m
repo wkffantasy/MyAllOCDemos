@@ -18,6 +18,7 @@
 #import "MoveAnimateController.h"
 #import "EditCellController.h"
 #import "SubclassController.h"
+#import "InstrumentsController.h"
 
 #import "RunTimeController.h"
 #import "WebViewController.h"
@@ -213,6 +214,9 @@
 - (void)jumpToTestDemosController{
     [self.navigationController pushViewController:[TestDemosController new] animated:YES];
 }
+- (void)jumpToTestInstrumentsController {
+    [self.navigationController pushViewController:[InstrumentsController new] animated:YES];
+}
 
 //dataSource
 
@@ -237,8 +241,12 @@
                               @"status":@"test",
                               @"jumeTo":NSStringFromSelector(@selector(jumpToTestDemosController)),
                               },
-
-        
+                          @{
+                          @"title":@"Instruments学习",
+                          @"titleDescription":@"Instruments学习",
+                          @"status":@"test",
+                          @"jumeTo":NSStringFromSelector(@selector(jumpToTestInstrumentsController)),
+                          },
                           ];
   
   NSMutableArray * dataArray = [NSMutableArray array];

@@ -76,7 +76,7 @@
   if (self.myImagesArray.count == 1) {
     pageControl.numberOfPages = self.myImagesArray.count;
   } else {
-    
+
     pageControl.numberOfPages = self.myImagesArray.count - 2;
     
   }

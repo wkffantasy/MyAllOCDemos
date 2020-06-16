@@ -9,5 +9,6 @@ target 'WKFAllMyDemos' do
     pod 'SDWebImage'
     pod 'TCBlobDownload'
     pod 'FGGDownloader','1.1'
+    pod 'MLeaksFinder'
     
 end

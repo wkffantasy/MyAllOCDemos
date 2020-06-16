@@ -59,7 +59,7 @@
         NSLog(@"error ==%@",error.localizedDescription);
     }];
     
-    UIStatusBar * bar = [[UIStatusBar alloc]init];
+//    UIStatusBar * bar = [[UIStatusBar alloc]init];
     
 //    FGGDownloadManager * downloadManger = [FGGDownloadManager shredManager];
 //    [downloadManger downloadWithUrlString:urlString toPath:nil process:^(float progress, NSString *sizeString, NSString *speedString) {
