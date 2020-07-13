@@ -15,6 +15,7 @@
 @property (copy, nonatomic) NSString * titleDescription;
 @property (copy, nonatomic) NSString * status;
 @property (copy, nonatomic) NSString * jumpTo;
+@property (nonatomic, copy) NSString *vc;
 
 
 @end
