@@ -33,6 +33,7 @@
     notReal();
     return;
   }
+//    asdadas 
   NSParameterAssert([urlString isKindOfClass:[NSString class]]);
   
   UIImage * image = nil;
