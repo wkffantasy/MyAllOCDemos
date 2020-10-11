@@ -14,33 +14,39 @@ PODS:
   - AFNetworking/Serialization (3.1.0)
   - AFNetworking/UIKit (3.1.0):
     - AFNetworking/NSURLSession
-  - BaiduMapKit (3.3.2)
   - kfMarqueeView (1.0)
   - Masonry (0.6.4)
   - MBProgressHUD (1.0.0)
   - Reachability (3.2)
-  - SDWebImage (3.8.1):
-    - SDWebImage/Core (= 3.8.1)
-  - SDWebImage/Core (3.8.1)
+  - SDWebImage (3.8.2):
+    - SDWebImage/Core (= 3.8.2)
+  - SDWebImage/Core (3.8.2)
 
 DEPENDENCIES:
   - AFNetworking (~> 3.1.0)
-  - BaiduMapKit (~> 3.3.2)
   - kfMarqueeView (~> 1.0)
   - Masonry (~> 0.6.4)
   - MBProgressHUD (~> 1.0.0)
   - Reachability (~> 3.2)
   - SDWebImage (~> 3.8.1)
 
+SPEC REPOS:
+  https://github.com/cocoapods/specs.git:
+    - AFNetworking
+    - kfMarqueeView
+    - Masonry
+    - MBProgressHUD
+    - Reachability
+    - SDWebImage
+
 SPEC CHECKSUMS:
   AFNetworking: 5e0e199f73d8626b11e79750991f5d173d1f8b67
-  BaiduMapKit: 5118390d63b375483bd64c963e8e32a40fd9ddb5
   kfMarqueeView: 77e8eacef1fef34d2b34080e401fb8ae827f7750
   Masonry: 281802d04d787ea2973179ee8bcb50500579ede2
   MBProgressHUD: 4890f671c94e8a0f3cf959aa731e9de2f036d71a
   Reachability: 33e18b67625424e47b6cde6d202dce689ad7af96
-  SDWebImage: 35f9627a3e44b4f292a8a8ce6a531fa488239b91
+  SDWebImage: 098e97e6176540799c27e804c96653ee0833d13c
 
-PODFILE CHECKSUM: e36419f941f63567cc2249a1fb95cee2f1714003
+PODFILE CHECKSUM: 7b26c1f92d7db1696d6855262587e7491f8d5d06
 
-COCOAPODS: 1.3.0.beta.2
+COCOAPODS: 1.6.1
