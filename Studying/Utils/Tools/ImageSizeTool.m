@@ -35,8 +35,8 @@
     return;
   }
   NSParameterAssert([urlString isKindOfClass:[NSString class]]);
-  
-  UIImage * image = nil;
+//  asdadas das
+  UIImage *image = nil;
   
   NSURL *url = [NSURL URLWithString:urlString];
     
