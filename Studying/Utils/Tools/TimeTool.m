@@ -10,6 +10,8 @@
 
 @implementation TimeTool
 
+
+
 + (NSString *)TimeSecondConvertToString:(int)second{
   
   NSString * realTime = nil;
